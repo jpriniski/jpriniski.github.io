@@ -81,7 +81,7 @@ ul.posts li {
     list-style: none;
 }
 #container {
-    width:960px;
+    width:960px auto;
     margin:20px auto;
 }
 #content {
@@ -102,3 +102,4 @@ img.center {
   margin-right: auto;
   width: 50%;
 }
+
