@@ -8,7 +8,7 @@ p.bold{
     font-family: sans-serif;
 }
 nav ul {
-    font-size: 1.1em;
+    font-size: .8em;
     font-family:Palatino LT STD,Book Antiqua,Georgia,serif;
     padding: 1px;
     list-style: none;
@@ -34,12 +34,12 @@ a.selected {
 }
 
 h1 {
-    font-size: 2.3em;
+    font-size: 1.8em;
     font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
     color:#0000FF;
 }
 h2 {
-    font-size: 1.8em;
+    font-size: 1em;
     font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
     color:#FF9400;
 }
@@ -52,7 +52,7 @@ hr{
 
 p {
     font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
-    font-size: 1.3em;
+    font-size: 1em;
     line-height: 1.25em;
     color: #333;
 }
