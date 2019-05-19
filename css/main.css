@@ -8,16 +8,16 @@ p.bold{
     font-family: sans-serif;
 }
 nav ul {
-    font-size: .8em;
+    font-size: .9em;
     font-family:Palatino LT STD,Book Antiqua,Georgia,serif;
-    padding: 1px;
+    padding: 0px;
     list-style: none;
     font-weight: bold;
 
 }
 nav ul li, footer ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 7px;
 }
 a {
     text-decoration: none;
