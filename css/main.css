@@ -1,6 +1,13 @@
 body {
     margin: 60px auto;
     width: 70%;
+    background: 65ff00;
+}
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
 }
 
 p.bold{
@@ -21,16 +28,16 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #EE00FF;
+    color: #ff0000;
 }
 a:hover {
     text-decoration: none;
     color: #00FF00;
 }
 
-a.selected { 
-    color: #00FF00;
-     
+a.selected {
+    color: #ff0000;
+
 }
 
 
@@ -65,18 +72,22 @@ h2 {
     font-family: "Gill Sans", sans-serif;
     color:#FF9400;
 }
-hr{ 
+hr{
   height: 1px;
   color: red;
   background-color: red;
   border: none;
 }
-
+body {background-color:#ff1100;}
 p {
-    font-family: "Gill Sans", sans-serif;
+    font-family: "venus", sans-serif;
     font-size: 1em;
     line-height: 1.25em;
     color: #333;
+    background-color: #65ff00;
+    vertical-align: middle;
+    border: 5px dashed #F1C40F;
+    border-color:#000dff
 }
 
 p.lead{
@@ -84,9 +95,9 @@ p.lead{
     font-size: 1.25em;
 }
 .description em{
-  
+
   text-decoration-color: #6B5B95;
-  
+
 }
 footer {
     border-top: 1px solid #d5d5d5;
@@ -94,8 +105,8 @@ footer {
 }
 
 
-ul.posts { 
-    margin: 20px auto 40px; 
+ul.posts {
+    margin: 20px auto 40px;
     font-size: 1.5em;
 }
 
@@ -145,11 +156,11 @@ img.center {
 }
 
 .wordart.rainbow .text {
-  background: red; 
+  background: red;
   background: -webkit-linear-gradient(left, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
   background: -o-linear-gradient(left, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
   background: -moz-linear-gradient(left, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
-  background: linear-gradient(to right, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af); 
+  background: linear-gradient(to right, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
