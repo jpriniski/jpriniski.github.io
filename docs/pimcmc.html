@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>π estimator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #canvas {
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        #result {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+        #equation {
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            margin-top: 20px;
+        }
+        #counts {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>I'm too dumb to prove anything.</h1>
+    <strong>But if you forget the value of π at a moment when you really need to know it, feel free to estimate it using this MCMC sampling app I engineered just for you! </strong><br><br>
+    <label for="numPoints">Number of Points:</label>
+    <input type="number" id="numPoints" value="10000">
+    <button onclick="computePi()">Compute π</button><br>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div id="result"></div>
+    <div id="counts"></div>
+    <div id="equation">
+        <strong> Skeptical, Ciara? There is an elegant beauty in our best approximations, too :)</strong><br>
+        area of a circle = π r^2 <br>
+        area of a square = (2r)^2 = 4 r^2 <br>
+        randomly throw points between -1 and 1 <br>
+        the proportion of points in the unit circle is: <br>
+        p = (πr^2) / (4r^2) = π / 4 <br>
+        therefore: π ≈ 4.0 × p = 4 × (number of points inside circle / total number of points)
+    </div>
+
+    <script>
+        function computePi() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            const numPoints = document.getElementById('numPoints').value;
+            const width = canvas.width;
+            const height = canvas.height;
+            const radius = width / 2;
+
+            // Clear the canvas
+            ctx.clearRect(0, 0, width, height);
+
+            let insideCircle = 0;
+
+            // Randomly place points and count those inside the circle
+            for (let i = 0; i < numPoints; i++) {
+                const x = Math.random() * width;
+                const y = Math.random() * height;
+                const distance = Math.sqrt((x - radius) ** 2 + (y - radius) ** 2);
+
+                if (distance <= radius) {
+                    ctx.fillStyle = 'red';
+                    insideCircle++;
+                } else {
+                    ctx.fillStyle = 'blue';
+                }
+                ctx.fillRect(x, y, 2, 2);
+            }
+
+            // Calculate the estimated value of Pi
+            const piEstimate = 4 * (insideCircle / numPoints);
+
+            // Display the result
+            document.getElementById('result').innerText = `Estimated Value of π: ${piEstimate.toFixed(6)}`;
+            document.getElementById('counts').innerHTML = `
+                Number of points inside circle (red): ${insideCircle}<br>
+                Number of points outside circle (blue): ${numPoints - insideCircle}
+            `;
+        }
+    </script>
+</body>
+</html>
