@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            height: 75vh;
+            width: 75%;
+            margin: 0 auto; /* Center the map horizontally */
+        }
+        .header {
+            text-align: center;
+            font-size: 68pt;
+            font-weight: bold;
+            color: #204e9c;
+            margin: 20px 0;
+        }
+        .subheader {
+            text-align: center;
+            font-size: 36pt;
+            color:#dd2027;
+            margin: 20px 0;
+        }
+    </style>
+<body>
+    <div class="header">Google Data Centers Span the Globe</div>
+    <div class="subheader">Storing your private data requires a lot of water, energy, and virgin earth.</div>
+
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([20, 0], 2);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+        }).addTo(map);
+
+        const locations = [
+            { continent: "North America", location: "Arcola (VA), USA", geo: [38.94333, -77.52433], timeline: "2017 - announced", description: "" },
+            { continent: "North America", location: "Atlanta (GA), USA", geo: [33.74973, -84.58481], timeline: "2003 - launched", description: "350 employees" },
+            { continent: "South America", location: "Cerrillos, Santiago, Chile", geo: [-33.52056, -70.72167], timeline: "2020 - announced; 2021 - launched", description: "" },
+            { continent: "Asia", location: "Changhua County, Taiwan", geo: [24.1385, 120.4257], timeline: "2011 - announced; 2013 - launched", description: "60 employees" },
+            { continent: "North America", location: "Clarksville (TN), USA", geo: [36.62111, -87.26306], timeline: "2015 - announced", description: "" },
+            { continent: "North America", location: "Columbus (OH), USA", geo: [39.9612, -82.9988], timeline: "2022 - launched", description: "" },
+            { continent: "North America", location: "Council Bluffs (IA), USA", geo: [41.22158, -95.86387], timeline: "2007 - announced; 2009 - completed first phase; 2012 and 2015 - expanded", description: "130 employees" },
+            { continent: "Asia", location: "Delhi, India", geo: [28.6139, 77.209], timeline: "2020 - announced; 2021 - launched", description: "" },
+            { continent: "Middle East", location: "Doha, Qatar", geo: [25.27699, 51.52001], timeline: "2023 - launched", description: "" },
+            { continent: "Europe", location: "Dublin, Ireland", geo: [53.32011, -6.44206], timeline: "2011 - announced; 2012 - launched", description: "150 employees" },
+            { continent: "Europe", location: "Eemshaven, Netherlands", geo: [53.4252171, 6.8622574], timeline: "2014 - announced; 2016 - launched; 2018, 2019 - expansion", description: "200 employees" },
+            { continent: "Europe", location: "Frankfurt, Germany", geo: [50.1225, 8.97417], timeline: "2022 - expanded", description: "" },
+            { continent: "Europe", location: "Fredericia, Denmark", geo: [55.55819, 9.65577], timeline: "2018 - announced; 2020 - launched", description: "€600M building costs" },
+            { continent: "Europe", location: "Ghlin, Hainaut, Belgium", geo: [50.46933, 3.86547], timeline: "2007 - announced; 2010 - launched", description: "12 employees" },
+            { continent: "Europe", location: "Hamina, Finland", geo: [60.53658, 27.117], timeline: "2009 - announced; 2011 - first phase completed; 2022 - expansion", description: "6 buildings, 400 employees" },
+            { continent: "North America", location: "Henderson (NV), USA", geo: [36.05556, -115.01028], timeline: "2019 - announced; 2020 - launched", description: "64-acres; $1.2B building costs" },
+            { continent: "Asia", location: "Inzai, Japan", geo: [35.81778, 140.1325], timeline: "2023 - launched", description: "" },
+            { continent: "Asia", location: "Koto-Ku, Tokyo, Japan", geo: [35.72, 139.81], timeline: "2016 - launched", description: "" },
+            { continent: "North America", location: "Leesburg (VA), USA", geo: [39.05177, -77.53899], timeline: "2017 - announced", description: "" },
+            { continent: "North America", location: "Lenoir (NC), USA", geo: [35.89855, -81.54738], timeline: "2007 - announced; 2009 - launched", description: "over 110 employees" },
+            { continent: "Asia", location: "Lok Yang Way, Pioneer, Singapore", geo: [1.324, 103.69333], timeline: "2022 - launched", description: "" },
+            { continent: "Europe", location: "Madrid, Spain", geo: [40.51944, -3.34083], timeline: "2022 - launched", description: "" },
+            { continent: "Pacific", location: "Melbourne, Australia", geo: [-37.8136, 144.9631], timeline: "2021 - launched", description: "" },
+            { continent: "Europe", location: "Middenmeer, Noord-Holland, The Netherlands", geo: [52.79, 5.02917], timeline: "2019 - announced", description: "" },
+            { continent: "North America", location: "Midlothian (TX), USA", geo: [32.44306, -97.06222], timeline: "2019 - announced; 2022 - launched", description: "375-acres; $600M building costs" },
+            { continent: "Europe", location: "Milan, Italy", geo: [45.4642, 9.1900], timeline: "2022 - launched", description: "" },
+            { continent: "North America", location: "Moncks Corner (SC), USA", geo: [33.06411, -80.04336], timeline: "2007 - launched; 2013 - expanded", description: "150 employees" },
+            { continent: "North America", location: "Montreal, Quebec, Canada", geo: [45.5017, -73.5673], timeline: "2018 - launched", description: "62.4-hectares; $600M building costs" },
+            { continent: "Asia", location: "Mumbai, India", geo: [19.076, 72.8777], timeline: "2017 - launched", description: "" },
+            { continent: "North America", location: "New Albany (OH), USA", geo: [40.06139, -82.75861], timeline: "2019 - announced", description: "400-acres; $600M building costs" },
+            { continent: "Asia", location: "Osaka, Japan", geo: [34.6937, 135.5023], timeline: "2019 - launched", description: "" },
+            { continent: "South America", location: "Osasco, São Paulo, Brazil", geo: [-23.53288, -46.79199], timeline: "2017 - launched", description: "" },
+            { continent: "North America", location: "Papillion (NE), USA", geo: [41.13333, -96.14417], timeline: "2019 - announced", description: "275-acres; $600M building costs" },
+            { continent: "Europe", location: "Paris, France", geo: [48.8566, 2.3522], timeline: "2022 - launched", description: "" },
+            { continent: "North America", location: "Pryor Creek (OK), USA", geo: [36.24114, -95.33006], timeline: "2007 - announced; 2012 - expanded", description: "over 400 employees, land at MidAmerica Industrial Park" },
+            { continent: "South America", location: "Quilicura, Santiago, Chile", geo: [-33.35847, -70.69733], timeline: "2012 - announced; 2015 - launched", description: "up to 20 employees expected. A million dollar investment plan to increase capacity at Quilicura was announced in 2018." },
+            { continent: "North America", location: "Reno (NV), USA", geo: [39.50111, -119.42944], timeline: "2017 - 1,210 acres of land bought in the Tahoe Reno Industrial Center; 2018 - announced; 2018 November - project approved by the state of Nevada", description: "" },
+            { continent: "North America", location: "Salt Lake City (UT), USA", geo: [40.7608, -111.8910], timeline: "2020 - launched", description: "" },
+            { continent: "Asia", location: "Seoul, South Korea", geo: [37.5665, 126.9780], timeline: "2020 - launched", description: "" },
+            { continent: "Pacific", location: "Sydney, Australia", geo: [-33.8688, 151.2093], timeline: "2017 - launched", description: "" },
+            { continent: "Middle East", location: "Tel Aviv, Israel", geo: [32.0853, 34.7818], timeline: "2022 - launched", description: "" },
+            { continent: "North America", location: "The Dalles (OR), USA", geo: [45.63251, -121.20227], timeline: "2006 - launched", description: "80 full-time employees" },
+            { continent: "North America", location: "Toronto, Canada", geo: [43.65107, -79.347015], timeline: "2021 - launched", description: "" },
+            { continent: "Europe", location: "Turin, Italy", geo: [45.14639, 7.74222], timeline: "2023 - launched", description: "" },
+            { continent: "South America", location: "Vinhedo, São Paulo, Brazil", geo: [-23.02722, -47.055], timeline: "", description: "" },
+            { continent: "Europe", location: "Warsaw, Poland", geo: [52.2297, 21.0122], timeline: "2019 - announced; 2021 - launched", description: "" },
+            { continent: "Asia", location: "Wenya, Jurong West, Singapore", geo: [1.35133, 103.70978], timeline: "2011 - announced; 2013 - launched; 2015 - expanded", description: "" },
+            { continent: "North America", location: "Widows Creek (Bridgeport) (AL), USA", geo: [34.91344, -85.74808], timeline: "2018 - broke ground", description: "" },
+            { continent: "Europe", location: "Zürich, Switzerland", geo: [47.44694, 8.21083], timeline: "2018 - announced; 2019 - launched", description: "" },
+        ];
+
+        locations.forEach(loc => {
+            const marker = L.marker(loc.geo).addTo(map);
+            marker.bindPopup(`<b>${loc.location}</b><br>Timeline: ${loc.timeline}`);
+            marker.on('mouseover', function (e) {
+                this.openPopup();
+            });
+            marker.on('mouseout', function (e) {
+                this.closePopup();
+            });
+        });
+    </script>
+
+    <div class="paragraph">
+
+   
+the world is in our phones and laptop. we have unfettered access to our data, all data. 
+- the cloud / engineering makes possible - information stored in steady state storage (what is memory of the space???) </br></br>
+ 
+Think about all data created in last 5 years.  Algorithms collect 'trace' data that is stored physically on a network of computers, oftentimes very far away from the producer and maintainer of that data. A credit card transaction in Milwaukee might be stored in a computer system chilled by AC in Henderson, Nevada. 
+
+While data and digital feels spaceless, completely infinite, unphysical - storage of that data takes considerable amounts of space. This data is now stored in large warehouse centers / complexes, in what was virgin desert, valleys, and forests a handful of years ago.
+
+
+<div class="subheader"><a href="https://www.racksolutions.com/news/data-center-news/top-10-largest-data-centers-world/" target="_blank">Check out the Top 10 Largest Data Centers in the World!</a></div>
+
+There are three things to consider with implications of data centers: water/energy, their consumption of land, effect on local communities --> prolonging our atomization. Energy/water is true - many are built in places without abundant access to water. Water, energy, earth. Your data consumes this at mounting scale, it is constricting the earth's flow, your flow. Our collective realization of our one true potential 
+
+
+<div class="subheader"><a href="https://www.watercalculator.org/footprint/data-centers-water-use/" target="_blank">Learn How Data Centers Chug Water!</a></div>
+
+
+
+
+Google data centers use water, and a lot of it, because they use a lot of electricity to make all our searches (and other activities we do on Google) possible. In 2021, the search giant used 3.3 billion gallons of water in the US alone.<a href="https://www.watercalculator.org/news/news-briefs/google-data-center-water/">Watch Google's Data Centers Chug Water!</a><br>
+
+How much water individual data centers use is not generally well known. Call it an operational secret, or maybe it’s something the municipal water system serving the data center might want divulged, especially when the data center is located in a water scarce area where water resources are in stiff competition from other sectors like agriculture, residential development or even industrial users like power plant operators. In the days of dwindling water resources, a fight over water is a fight it’s best to be out in front of.<br>
+
+
+
+
+Land, land, land. Taken from 
+<a href="https://www.ksl.com/article/50855355/">a KSL article</a> about a data center emergence in Eagle Rock, Utah - colorado-based-company-acquires-land-for-another-data-center-in-eagle-mountain
+- "We identified data centers early on as a way to employ residents, pay for the infrastructure of our growing city, and form partnerships to strengthen this close-knit community," Eagle Mountain Mayor Tom Westmoreland said in a statement. "Beyond the fiscal impact, our new technology neighbors have been great additions to our community and we look forward to working with partners like Tract to develop new campuses and expand our emergence as a tech hub while maintaining our small-town charm."
+- "Data centers continue to migrate to campus deployments and the building blocks for land and power are getting bigger to keep pace with the underlying demand," Graham Williams, chief investment officer of Tract, said in the release. "Building on Utah's data center sales tax exemption and low power rates, Eagle Mountain has distinguished itself through thoughtful planning and having sufficient contiguous land to meet the campus needs of tomorrow. We appreciate the partnership with the city and look forward to accelerating responsible infrastructure for data center development."
+- 
+
+
+<div class="subheader"><a href="https://www.watercalculator.org/news/news-briefs/google-data-center-water/" target="_blank">Google Plant Water calculator.</a></div>
+
+Look up articles about Eagle Mountain. Watch the effects on local community development in American West. The <a href="https://www.themesatribune.com/news/eastmark-rages-at-yet-another-data-mega-center/article_37192ff4-9619-11ee-a3fd-6f234a79abdf.html" target="_blank">Case of EastMark</a> Eastmark: The 10-year-old community of 20,000 in southeast Mesa has become a vibrant neighborhood in a relatively short time. Look into Project Borelius (located nearby). Meta’s planned 2.5-million-square-foot hyperscale data center in Eastmark is expected to start operations early next year on 381 acres. “Enough with these massive box buildings. We need more retail space in this area, more grocery options. Not more industrial,” one commenter wrote."
+
+Check out more on Meta's data center being the fancy new suburbs.  <a href="https://datacenters.atmeta.com" target="_blank">https://datacenters.atmeta.com</a> and 
+<a href="https://datacenters.atmeta.com/wp-content/uploads/2023/12/Arizona-Mesa.pdf" target="_blank">https://datacenters.atmeta.com/wp-content/uploads/2023/12/Arizona-Mesa.pdf</a>
+
+￼
+Future data centers being developed...
+
+These social media sites and technologies are polarizing us - they are AI research companies that are developing generative AI (what is the scale and storage requirements of these? think about the energy and water consumption). 
+
+digital spaces require material/natural resources to produce and maintain - synthetic media is pulling us apart - the sole solution is to throw our phones and laptops in the trash!!! how to decelerate? these are questions we need to take very seriously - and global fixes do nothing - it is at the level of the individual we can do these things ; but how? it's easy when you see how good life is without, but I can't even disconnect completely - what's keeping me here? what's keeping you here? <br><br><br>
+
+<a href="https://en.wikipedia.org/wiki/Google_data_centers" target="_blank">Data</a> provided by Wikipedia, thank you crowdsourcing and free public education!
+
+
+<div class="subheader">Report brought to you by the Slow Technology Labratory in collaboration with the Arizona Defense League.</div>
+
+
+
+
+    </div>
+</body>
+</html>
