@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: white;
+        }
+
+        #text-container {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto; /* Enable vertical scrolling */
+            position: relative;
+            padding: 0px;
+            background-color: white;
+            border: 0px solid #ccc;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .line {
+            white-space: nowrap;
+            position: relative;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="text-container"></div>
+
+    <script>
+        const lines = [
+            "Report on the Road by Hunter Priniski",
+            "Six days from Fort Lauderdale to Phoenix",
+            "with little-to-no time to write",
+            "chasing the horizon",
+            "Beneath the billboards of injury lawyers promising big scores",
+            "Blinded by pouring rain on Florida's back roads",
+            "Corralled out of wetlands filled to host competing kingdoms of McMansions",
+            "a couple High Noons to sing country for Precious Kitty at Yaya's Daytona Beach",
+            "White sand nearly flying off Texas' dilapidated roads",
+            "but at least there is the world's largest Buc-ee's to grant me a refreshing iced tea",
+            "Haulted by a car fire, standing still outside Vail",
+            "Still atop the lifted interstate",
+            "snaking over brown San Antonio",
+            "bisecting gray New Orleans",
+            "floating through green Atchafalaya",
+            "sinking beneath Mobile Bay",
+            "tracing the dividing line",
+            "between here and there in El Paso",
+            "where a new Olive Garden signals progress",
+            "crossing the New Mexico line",
+            "to find a mango lassi in a mid-century boom town on its prolonged disintegration into dust",
+            "Each city's cacophony of complexity emerges from dark quiet",
+            "outward expanding into nothing that's out of reach from the West-shooting line",
+            "Approaching each center, strung together as one, but separated",
+            "by the vastness of what it rose from decreases my attention",
+            "I can't see the clouds in gymnastics with 20, 200, 2000 cars",
+            "because in noise there are no clouds to see",
+            "I'm reminded I'm always still here",
+            "dying outside the road",
+            "becoming a sign that lost its signage",
+            "Where I almost killed a gray fox, and where a gray fox almost killed me",
+            "Forgetting what day it is stewing in the road's delirium",
+            "Roaring, dying from the need to reach the next point",
+            "Alive because between this point and that one we seem to have lost the thread",
+            "The thread pulls us toward each center",
+            "bringing ringing to my knees",
+            "Underneath the mattress we're safe from bed bugs and the repeating imagery running down the red aisle where I' can't seem to find the breakfast bar",
+            "Over filled with black coffee, stumbling into each stall like a ghost",
+            "Will he remember me? as I remember him here, before he knew me, before I took his still presence for granted",
+            "Now I know I will never see another girl quite like her radiance in Houston",
+            "picking out the notes of some nutrients with our fingers",
+            "Stalked, surveilled, scolded among stolen artifacts",
+            "where under the white light of the white walled room the state's voyeur yells no, no, no, no, no!",
+            "I won't see the inside of the chapel",
+            "unlike the good ole boys",
+            "I won't find my barbie bride to take there",
+            "to secure in marriage",
+            "with my narrative emerging from this white loud",
+            "culture designed to dominate her virgin body",
+            "I collapsed outside the rolling green north of San Antonio",
+            "where we passed a picnic bench and a view or two because the objective",
+            "is subjective truth in hearing something silent",
+            "inside the notes between the rhythm",
+            "no meter collapses the outer lines dinging, ringing",
+            "for the bear carcass sprawled out on the freeway onramp near the center of Pensacola",
+            "in the lackluster thrift stores",
+            "in the neon glow of another sign that, passed by like the rest, was forgotten before it was remembered",
+            "finally reaching the West",
+            "mourning in Van Horn",
+            "where snaking trains pull green out of the endless brown point always resting beyond reach",
+            "I find silence in",
+            "my grandfather asking",
+            "that I dump his dead body from a helicopter",
+            "into some deep old mountain beyond these roads",
+            "where he too can be forgotten, where I wish to be,",
+            "longing for tranquility in the point on the horizon that is still there before me",
+            "2568 miles later."
+        ];
+
+        const container = document.getElementById('text-container');
+        const typingSpeed = 10 / 4; // Typing speed for each character (1000 ms / 240 wpm -> approx. 80 chars per second)
+
+        let currentLine = 0;
+
+        function typeLine(lineIndex) {
+            const line = document.createElement('div');
+            line.className = 'line';
+            container.appendChild(line);
+
+            let text = lines[lineIndex];
+            let charIndex = 0;
+
+            function typeChar() {
+                if (charIndex < text.length) {
+                    line.textContent += text[charIndex];
+                    charIndex++;
+                    setTimeout(typeChar, typingSpeed);
+                } else {
+                    line.style.opacity = 1;
+                    setTimeout(() => moveUpLine(line), 1000); // Wait before moving the line up
+                }
+            }
+
+            typeChar();
+        }
+
+        function moveUpLine(line) {
+            line.style.transition = 'transform 0.5s ease-in-out';
+            line.style.transform = 'translateY(-100%)';
+
+            setTimeout(() => {
+                if (currentLine < lines.length - 1) {
+                    currentLine++;
+                    typeLine(currentLine);
+                }
+            }, 600); // Start typing the next line after moving the current one up
+        }
+
+        typeLine(currentLine); // Start with the first line
+    </script>
+
+</body>
+</html>
