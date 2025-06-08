@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rise of QAnon: A Cognitive Modeling Study</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #1a1a1a;
+    }
+    .pill {
+      display: inline-block;
+      background: #444;
+      color: white;
+      padding: 4px 10px;
+      margin: 5px 5px 5px 0;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="project4.html" class="back-link">← Back to Project Overview</a>
+
+  <h1>Rise of QAnon</h1>
+  <p class="pill">Conspiracy Theories</p>
+  <p class="pill">Cognitive Modeling</p>
+  <p class="pill">Network Analysis</p>
+  <p class="pill">Twitter Data</p>
+  <p class="pill">Topic Modeling</p>
+
+  <div class="section">
+    <h2>Overview</h2>
+    <p>This project investigates the social and cognitive dynamics behind the rise of the QAnon conspiracy movement using a large-scale Twitter dataset and a combination of network and content analysis tools.</p>
+    <p>We propose that QAnon is sustained by a hypercoherent belief system that thrives in online echochambers, offering a narrative of Good versus Evil that resonates within politically polarized social media ecosystems.</p>
+  </div>
+
+  <div class="section">
+    <h2>What is QAnon?</h2>
+    <ul>
+      <li>Promotes the belief that a cabal of Satan-worshiping elites operate a child sex-trafficking ring.</li>
+      <li>Claims Donald Trump is destined to defeat them.</li>
+      <li>Supported by ~⅓ of Republican-identifying individuals as “mostly true” (CIVIQS, 2020).</li>
+      <li>Undermines trust in science and expert institutions.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Theoretical Framing</h2>
+    <ul>
+      <li><strong>Hypercoherence:</strong> Beliefs are adopted if they increase coherence within an individual’s mental model.</li>
+      <li><strong>Echochambers:</strong> Environments where curated content reinforces identity and belief alignment.</li>
+      <li>QAnon is a natural consequence of platforms that promote virality and belief-confirming content.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Data</h2>
+    <ul>
+      <li>880,000 tweets from 110,000 users</li>
+      <li>Timeframe: June–July 2018</li>
+      <li>Extracted retweet behavior and tweet content for analysis</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Study 1: Network Analysis</h2>
+    <ul>
+      <li>Constructed a retweet network to reveal key users and community structure.</li>
+      <li><strong>Findings:</strong> 
+        <ul>
+          <li>Far more “distributors” than “producers.”</li>
+          <li>Only a few users were central to narrative creation.</li>
+          <li>Many small communities, few large embedded groups (k-clique detection).</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Study 2: Topic Modeling</h2>
+    <ul>
+      <li>Fit topic models to tweets from five large communities.</li>
+      <li>Extracted themes such as militarization, justice, and vengeance (e.g., “LetTheTribunalsBegin”, “PeopleAreWeapons”).</li>
+      <li>Common framing: a battle between Good and Evil.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Future Directions</h2>
+    <ul>
+      <li>Behavioral experiments to test the influence of moral framing on conspiracy belief strength.</li>
+      <li>Demographic and identity-based predictors of belief adoption.</li>
+      <li>Improve modeling with cleaner and longer textual data.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Conclusion</h2>
+    <ul>
+      <li>QAnon’s growth can be explained by a hypercoherent, Good-vs-Evil narrative architecture.</li>
+      <li>Social platforms amplify a small number of content producers via mass retweeting.</li>
+      <li>This work highlights the need for better moderation and public understanding of how conspiratorial thinking takes root online.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p><strong>Authors:</strong> Hunter Priniski, Mason McClay, Keith J. Holyoak</p>
+    <p><strong>Affiliation:</strong> Department of Psychology, UCLA</p>
+  </footer>
+</body>
+</html>

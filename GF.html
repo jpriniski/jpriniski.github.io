@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mapping Moral Valence of Tweets</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #1a1a1a;
+    }
+    .pill {
+      display: inline-block;
+      background: #333;
+      color: white;
+      padding: 4px 10px;
+      margin: 5px 5px 5px 0;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="Project4.html" class="back-link">← Back to Project Overview</a>
+
+  <h1>Mapping Moral Valence of Tweets</h1>
+  <p class="pill">NLP</p>
+  <p class="pill">BLM</p>
+  <p class="pill">Moral Foundations</p>
+  <p class="pill">Social Media</p>
+  <p class="pill">Cluster Analysis</p>
+
+
+  https://arxiv.org/pdf/2104.09578
+
+  <div class="section">
+    <h2>Overview</h2>
+    <p>This project analyzes over 36,000 geo-located tweets in the aftermath of George Floyd's murder to uncover patterns of moral expression within the Black Lives Matter movement.</p>
+    <p>Using <strong>FrameAxis</strong> and the <strong>extended Moral Foundations Dictionary (eMFD)</strong>, tweets are embedded in a moral space to explore the moral dimensions activated in online discourse.</p>
+  </div>
+
+  <div class="section">
+    <h2>Motivation</h2>
+    <ul>
+      <li>Social media can catalyze moral alignment and social change.</li>
+      <li>Moral evaluations—especially outrage—drive group coordination and identity signaling.</li>
+      <li>We use the MAD model (Motivation, Attention, and Design) and Moral Foundations Theory to guide analysis.</li>
+    </ul>
+  </div>
+
+  <div class="section" >
+    <h2>Method</h2>
+
+    <strong>The eMFD approach was developed to map language documents to moral frames, defined by a set of 5 distinct moral axes.</strong> <a href="https://github.com/negar-mokhberian/Moral_Foundation_FrameAxis" target="_blank">GitHub Code Repository</a>
+
+    <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 800px; max-width: 100%; text-align: left; font-family: Arial, sans-serif; font-size: 14px;">
+      <thead>
+        <tr>
+          <th style="width: 180px;">Foundation<br>(virtue/vice)</th>
+          <th style="width: 380px;">Description (Virtuous Direction)</th>
+          <th style="width: 240px;">Example Keywords</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Authority/ Subversion</td>
+          <td>Desire/need for beneficial relationships with hierarchies in society.</td>
+          <td>respect, duty, obedience, rebellion, tradition</td>
+        </tr>
+        <tr>
+          <td>Care/ Harm</td>
+          <td>Compassion towards victims and the vulnerable, anger towards those perpetrating injustice and harm.</td>
+          <td>empathy, suffering, protect, violence, kindness</td>
+        </tr>
+        <tr>
+          <td>Fairness/ Cheating</td>
+          <td>Desire for cooperation and gratitude for just and trustworthy systems and people.</td>
+          <td>justice, equality, rights, fraud, fairness</td>
+        </tr>
+        <tr>
+          <td>Loyalty, Ingroup/ Betrayal</td>
+          <td>Desire for cohesive groups. Instantiates group pride and anger at traitors.</td>
+          <td>patriotism, unity, team, betrayal, allegiance</td>
+        </tr>
+        <tr>
+          <td>Sanctity, Purity/ Degradation</td>
+          <td>Relevant virtues consist of being temperamental and pious and clean.</td>
+          <td>purity, sacred, clean, disgusting, holy</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p style="font-style: italic; margin-top: 10px; font-family: Arial, sans-serif; font-size: 13px;">
+      Adapted from Moral Foundations Theory (Graham et al., 2013), which proposes that moral reasoning is structured by distinct psychological foundations.
+    </p>
+    
+  
+  </div>
+    
+    <figure style="text-align: center;">
+      <img alt="Moral Foundation Embeddings" src="images/MF embeddings.png" style="max-width: 60%; height: auto; border-radius: 8px;"/>
+      <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+        
+        Tweets are mapped to embedding space based on eMFD terms cosine similarity with the moral frames (axes) defined by the embeddings of the embeddings of assoicated moral keywords.
+      </figcaption>
+    </figure>
+
+
+
+  </div>
+
+  <div class="section">
+    <h2>Data</h2>
+    <ul>
+      <li>36,282 tweets geo-located to Los Angeles (Feb–Aug 2020)</li>
+      <li>30,223 tweets had at least one moral term</li>
+      <li>Breakdown: 26,827 BLM | 1,578 All/Blue Lives | 1,818 Defund Police</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Key Findings</h2>
+    <ul>
+      <li>Most moral content focused on Care, Harm, and Fairness violations (in line with MAD model predictions).</li>
+      <li>Ingroup Loyalty emerged strongly, highlighting community solidarity.</li>
+      <li>Clustering revealed multiple moral subthemes within BLM discourse.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Discussion & Future Directions</h2>
+    <ul>
+      <li>FrameAxis + eMFD pipeline effectively identifies nuanced moral patterns.</li>
+      <li>Short tweets and clustering limitations present challenges.</li>
+      <li>Future work: guided topic modeling and longer text corpora.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p><strong>Authors:</strong> J. Hunter Priniski, Negar Mokhberian, Bahareh Harandizadeh, Fred Morstatter, Kristina Lerman, Hongjing Lu, P. Jeffrey Brantingham</p>
+    <p><strong>Affiliations:</strong> UCLA, USC</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COVID-19 Belief Networks</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="Portfolio.html">← Back to Projects</a>
+
+    <h1>COVID-19 Belief Networks</h1>
+
+    <div class="tags">
+      <span class="tag">Surveys</span>
+      <span class="tag">Belief Modeling</span>
+      <span class="tag">Public Health</span>
+    </div>
+
+    <div class="summary">
+      <h3>🔍 Quick Summary</h3>
+      <ul>
+        <li>Surveyed over 2000 U.S. participants' beliefs about COVID-19 severity, political distrust, and medical skepticism prior to and during the first wave of cases</li>
+        <li>Identified two preexisting distrust types: medical and political</li>
+        <li>Bayesian models reveal that vaccine and political distrust existed prior to the pandemic’s first wave in the U.S.</li>
+        <li>Distrust expanded to include large medical organizations over the course of the pandemic</li>
+        <li>Medical misinformation targeted lingering anti-science views</li>
+      </ul>
+    </div>
+
+    <div class="button-links">
+      <a class="button" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263191" target="_blank">📄 Read Publication</a>
+      <a class="button" href="https://github.com/jpriniski/DarkeningSpring" target="_blank">📁 GitHub for Reproducing Results</a>
+    </div>
+
+    <h3>💡 Key Findings</h3>
+
+    <strong>Lingering distrust in Democratic politicians most strongly predicted COVID-19 skepticism during the first wave of cases</strong>
+    <figure style="text-align: center;">
+      <img alt="Covid-19 Surveys" src="images/journal.pone.0263191.g003.PNG" style="max-width: 100%; height: auto; border-radius: 8px;"/>
+      <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+        Histograms of three strongest predictors of prewave COVID-19 skepticism and their relation to political ideology.
+
+        Regression lines represent effect size estimates conditioned on the average response for the remaining predictors in the maximal model. Error regions represent 95% credible intervals (the interior 95% of the posterior distribution for the effect size). Participant-level averaged responses on the scales for those who identified as socially liberal (blue) and conservative (red) are jittered with kernel density plots representing the distribution of responses for each predictor. Responses of participants who identified as moderate were excluded from visualization but were included in the model. Horizontal density functions at top of each panel summarize distribution of responses by Democrats and Republicans on each predictor variable; vertical density functions at right summarize distribution of responses on the COVID-19 severity scale.
+      </figcaption>
+    </figure>
+
+    <strong>During the first wave of cases, COVID-19 skepticism became entrenched in a wider array of auxiliary beliefs</strong>
+    <figure style="text-align: center;">
+      <img alt="Covid-19 Surveys" src="images/journal.pone.0263191.g008.PNG" style="max-width: 100%; height: auto; border-radius: 8px;"/>
+      <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+        Histograms of five strongest predictors of first-wave COVID-19 skepticism and their relation to political ideology.
+
+        Regression lines represent effect size estimates conditioned on the average response for the remaining predictors in the maximal model. Error regions represent 95% credible intervals (the interior 95% of the posterior distribution for the effect size). Participant-level averaged responses on the scales for those who identified as socially liberal (blue) and conservative (red) are jittered, with kernel density plots representing the distribution of responses for each predictor. Responses of participants who identified as moderate were excluded from visualization but were included in the model. Scale labels are recoded for readability from the original 7-point Likert scale (Strongly Disagree = Low, Neither Agree nor Disagree = Unsure, Strongly Agree = High). Horizontal density functions at top of each panel summarize distribution of responses by Democrats and Republicans on each predictor variable; vertical density functions at right summarize distribution of responses on the COVID-19 severity scale. 
+      </figcaption>
+    </figure>
+
+    <strong>Summary of survey findings</strong>
+    <ul>
+      <li>Two coherent belief networks emerged: one pro-science, one skeptical</li>
+      <li>Distrust in scientists and politicians predicted COVID-19 skepticism, even after controlling for partisanship</li>
+      <li>Beliefs were internally coherent, even if incorrect by scientific standards</li>
+      <li>Distrust expanded to include large medical organizations over the course of the pandemic</li>
+      <li>Medical misinformation targeted lingering anti-science views</li>
+    </ul>
+
+    <h3>💡 Why It Matters</h3>
+    <p>People interpret scientific information through systems of beliefs. This study shows how belief systems update over the course of complex chains of events. Bayesian models fit to survey responses gathered prior to and during the first wave of cases demonstrate how internally coherent sets of beliefs can lead individuals to <strong>radically different conclusions</strong> about science, health, and public policy.</p>
+    <ul>
+      <li><strong>Public health use case:</strong> Understanding how belief systems shape vaccine hesitancy or mask resistance allows health organizations to design better communication strategies that account for <strong>underlying distrust</strong> and broader belief systems.</li>
+      <li><strong>Research use case:</strong> A behavioral scientist modeling political narrative interaction can apply the modeling framework to explore how <strong>clusters of belief</strong> influence evidence assimilation, belief change, and reasoning about social issues.</li>
+    </ul>
+
+    <hr>
+
+    <h3>📊 How the Study Was Conducted</h3>
+    <strong>Surveys administered in early 2020 allowed for identification of lingering belief networks shaping COVID-19 attitudes</strong>
+
+    <figure style="text-align: center;">
+      <img alt="Covid-19 Surveys" src="images/journal.pone.0263191.g001 (1).PNG" style="max-width: 100%; height: auto; border-radius: 8px;"/>
+      <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+        Dates on which surveys were administered in relation to rolling 7-day average of reported COVID-19 cases in the U.S. during 2020. Visualization of cases was produced using Our World in Data COVID-19 data tracker at ourworldindata.org. Case data provided by the COVID-19 data repository at the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University.
+      </figcaption>
+    </figure>
+
+    <strong>Survey questions were designed to probe a variety of beliefs related to COVID-19, political ideology, and medical distrust</strong>
+
+    <figure style="text-align: center;">
+      <img alt="Covid-19 Surveys" src="images/journal.pone.0263191.t001.PNG" style="max-width: 100%; height: auto; border-radius: 8px;"/>
+      <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+        Examples of questions on nine scales designed to assess attitudes related to COVID-19.
+      </figcaption>
+    </figure>
+
+    <ol>
+      <li><strong>Survey Design:</strong><br>
+      Developed a 62-item belief inventory covering science, medicine, politics, and pandemic-specific topics (e.g., lockdowns, vaccines, mortality).</li>
+
+      <li><strong>Participant Sample:</strong><br>
+      Recruited a <strong>nationally representative</strong> U.S. sample (N = 2,014) in April–May 2020 via YouGov.</li>
+
+      <li><strong>Bayesian Coherence Modeling:</strong><br>
+      Used Bayesian multilevel models to evaluate how belief systems cohered within individuals and across the population.</li>
+
+      <li><strong>Open Science:</strong><br>
+      All materials and data are available via Open Science Framework. You can download the following R script and survey data at the GitHub repository linked at the top of this project's page.</li>
+    </ol>
+
+    <iframe src="https://mfr.osf.io/render?url=https%3A%2F%2Fosf.io%2Fdownload%2Fw9vu2%2F%3Fdirect%26mode%3Drender"
+      width="100%"
+      scrolling="yes"
+      height="677px"
+      marginheight="0"
+      frameborder="0"
+      allowfullscreen
+      webkitallowfullscreen
+    ></iframe>
+
+  </div>
+</body>
+</html>

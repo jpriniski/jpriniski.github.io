@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Narrative Dynamics in Online Networks</title>
+
+<link href="css/styles.css" rel="stylesheet"/></head>
+<body>
+<div class="container">
+<a href="Portfolio.html">← Back to Projects</a>
+<h1>Narrative Interaction in Online Networks</h1>
+<div class="tags">
+<span class="tag">Agent-Based Modeling</span>
+<span class="tag">Belief Modeling</span>
+<span class="tag">Narratives</span>
+<span class="tag">Network Science</span>
+<span class="tag">Simulation</span>
+</div>
+<div class="summary">
+<h3>🔍 Quick Summary</h3>
+<ul>
+<li>How are narrative interactions shaped by network structure and individual beliefs about events?</li>
+<li>Combines behavioral experiments in social networks, LLM-powered agent-based modeling, and modeling language outputs with neural embeddings</li>
+<li>Developed software for running network experiments on narrative interaction and modeling narrative interaction behaviors</li>
+<li>This project includes published articles, opensource technology, and LLM-based simulation tools</li>
+</ul>
+</div>
+
+<h3>💻 Quick Access to Open Data and Code</h3>
+<div class="button-links">
+<a class="button" href="https://github.com/jpriniski/NetCom" target="_blank">📁 Network Experiment GitHub</a>
+<a class="button" href="Narrative Alignment (Portfolio).html" target="_blank">🧪 Python Notebook On Narrative Alignment</a>
+</div>
+<h3>📄 Project Overview</h3>
+<p>While narratives have shaped human beliefs and cultures for centuries, the internet has introduced new narrative phenomena. Long-standing cognitive psychology paradigms and computer science methodologies are poorly equipped to study digital forms of narrative interaction and networked communication.</p>
+<p>This project investigates how <strong>social network structure</strong>, <strong>narrative content</strong>, and communication contexts influence the formation and convergence of shared narratives in digital environments.</p>
+<ul>
+<li><strong>Large-scale behavioral experiments</strong> in custom-built online social networks</li>
+<li><strong>AI-based network simulations</strong> with LLM-powered generative agents <strong>(LLaMA, Qwen, DeepSeek, Gemma)</strong></li>
+<li><strong>Develop novel natural language modeling</strong> approaches to quantify individual and group-level narrative alignment and belief dynamics</li>
+</ul>
+<hr/>
+<h3>💡 Key Findings</h3>
+<strong> Spatially-embedded network structures produce echochambers while fully-connected structures produce shared behaviors</strong>
+<figure style="text-align: center;">
+<img alt="Onset of echochambers" src="images/Echochambers.png" style="max-width: 100%; height: auto; border-radius: 8px;"/>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+        Rewards and colormaps of hashtag responses across a single N = 20 run. Top panel shows results for a spatially-embedded network, the bottom panel is from a fully-connected network.
+         Left: Network structure with player nodes sized by participants’ final rewards for coordinating (range (top) 0-25; (bottom) 0-19). Right: Colormap of individual responses, rows represent individual participants’ set of responses, columns represent trials. Cells encode the first five letters of the generated hashtag.
+      </figcaption>
+</figure>
+<strong> Information complexity of narratives moderates effect of network structure on group consensus.</strong>
+<figure style="text-align: center;">
+<img alt="Belief dynamics in network experiments" src="images/Belief Dynamics.png" style="max-width: 100%; height: auto; border-radius: 8px;"/>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+        Onset of behavioral coherence during networked interaction. Panels display the proportion of each groupadopting a dominant response over course of interaction by group size (columns) and interaction media content (rows). Each
+line represents a single experimental run from a group of participants, and each point represents the proportion of the group
+reporting the most common response (which can change trial to trial for a given experimental run).
+      </figcaption>
+</figure>
+<strong> Narrative complexity moderates group outcomes be encouraging different social learning strategies</strong>
+<figure style="text-align: center;">
+<img alt="Social learning strategies in network experiments" src="images/Social Learning.png" style="max-width: 100%; height: auto; border-radius: 8px;"/>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+        Dynamics of individual decision strategy during networked interaction. Each panel illustrates the temporal
+        dynamics of the proportion of each group adopting one of the four decision strategies (sampling new responses, repeating a
+        partner’s last response, repeating one’s own previous response, and resampling from earlier context) across 40 trials in different
+        network structures (Spatially-embedded, Homogeneously-mixed) and interaction contents (Hashtag-matching, Face-naming).
+        We code cases when both a partner and oneself produces the same response (i.e., a rewarded response) as repeat self. Each
+        panel displays the proportion of participants choosing a particular strategy as a function of trial number, differentiated by group
+        size (20, 50, 100). Displayed proportions are averaged across runs for a given size, structure, and content. As shown in the top
+        panels, hashtag-matching networks sample new responses (red lines) for much longer than face-naming groups (bottom panels).
+        In contrast, participants in face-naming group are more quick to adopt the self-consistent strategy (repeating oneself, depicted
+        by the purple lines).
+      </figcaption>
+</figure>
+<hr/>
+<h3>🎯 Why It Matters</h3>
+<p>Shared and polarized narratives don’t emerge randomly, they evolve through <strong>networked interaction</strong>. Narrative interactions are shaped by individuals’ <strong>causal background knowledge</strong>, the <strong>social rewards</strong> of aligning beliefs and behaviors with others, and the <strong>network topology</strong> (who can talk to who) of communication. This project explains:</p>
+<ul>
+<li>Why some groups converge on shared interpretations of information while others fragment</li>
+<li>How digital environments including prompting instructions can facilitate group consensus rather than disagreement</li>
+<li><strong>Business use case:</strong> Social platforms or media organizations can apply these findings to <strong>optimize content prompts or feed structures</strong> that encourage consensus, diversity, or specific forms of engagement.</li>
+<li><strong>Research use case:</strong> Social scientists can use this paradigm to <strong>experimentally manipulate network properties</strong> and observe real-time narrative change and align human group behavior with simulation data from AI agents.</li>
+</ul>
+<hr/>
+<h3>🧪 How It Works</h3>
+<figure style="text-align: center;">
+<img alt="Overview of network experiment design" src="images/Networks Overview Figure.png" style="max-width: 100%; height: auto; border-radius: 8px;"/>
+<figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+        Experiment procedure and networked interaction tasks. The experimental design follows three blocks. We
+highlight a single node (in yellow) to illustrate a single participant’s tasks through the procedure. In the pre-interaction block,
+all participants read the Fukushima nuclear disaster narrative that encodes the graphical causal model illustrated. The causal
+model was not presented to participants. Participants then wrote a tweet-like personal narrative about the disaster and generated
+ten hashtags describing the event. Participants next entered a network interaction block where they communicated with network
+neighbors. In the network interaction block, group communication varied as a function of network structure
+(homogeneously-mixed vs spatially-embedded) and content of interaction (narrative interaction based on hashtag matching vs
+control based on the Name Game from Centola and Baronchelli (2015)). Participants interacted with neighbors, randomly
+chosen based on network structure, for 40 trials and received one point for each trial in which their response matched their
+neighbor’s (the participant with the most points at the end of network interaction received a financial reward). In the
+post-interaction block, participants wrote a personal narrative about the Fukushima nuclear disaster and ten more hashtags
+describing the event.
+      </figcaption>
+</figure>
+<ol>
+<li><strong>Experimental Network Design:</strong>
+      Participants interact in custom-built online social networks with two topologies:
+        <ul>
+<li><em>Homogeneous:</em> each node connected to all others</li>
+<li><em>Spatial:</em> ring-lattice with four neighbors</li>
+</ul>
+</li>
+<li><strong>Narrative Stimuli:</strong> Participants engage with narratives designed to elicit causal interpretations</li>
+<li><strong>Hashtag Rounds (x40):</strong> Incentivized coordination tasks over 40 trials per network</li>
+<li><strong>Natural Language Analysis:</strong> LLM-based semantic similarity of hashtags and personal narratives used to track group-level belief alignment</li>
+<li><strong>Multilevel Bayesian Modeling:</strong> Predicts hashtag convergence, group entropy, and narrative content as a function of network conditions</li>
+<li><strong>Simulated Generative Agents:</strong> LLM based networks can simulate trends to replicate experimental outcomes</li>
+</ol>
+<hr/>
+<h3>📚 Related Publications</h3>
+<ul>
+<li>Priniski, J. H., et al. (2024). Online network topology personal narratives and hashtag generation. Proceedings of the Cognitive Science Society. <a href="https://escholarship.org/uc/item/6pv4z0j5">eScholarship</a></li>
+<li>Priniski, J.H., et al. (2025). Effect-prompting shifts narrative framing of networked interactions. Proceedings of the Cognitive Science Society. <a href="PDFs/CogSci_2025.pdf">PDF</a></li>
+<li><strong>Other manuscripts available on request:</strong>
+<ul>
+<li>Priniski, J.H., et al. (Working Paper). Neighborhood topology shape narrative interaction dynamics in networked groups. <a href="PDFs/Online_Network_Topology.pdf" target="_blank">PDF</a></li>
+<li>Jha, A., Priniski, J., &amp; Morstatter, F. (Submitted ASONM). Simulating narrative interaction dynamics with generative agents (Submitted)</li>
+<li>Priniski, J.H. (Working Paper). Reinforcement learning model of narrative interaction.</li>
+</ul>
+</li>
+</ul>
+</div>
+</body>
+</html>

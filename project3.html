@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Correcting Misconceptions with Crowdsourced Narratives</title>
+
+<link href="css/styles.css" rel="stylesheet"/></head>
+<body>
+<div class="container">
+<a href="Portfolio.html">← Back to Projects</a>
+<h1>Correcting Misconceptions with Crowdsourced Narratives</h1>
+<div class="tags">
+<span class="tag">Behavioral Science</span>
+<span class="tag">Belief Change</span>
+<span class="tag">Belief Modeling</span>
+
+<figure style="text-align: center;">
+    <img alt="Covid-19 Surveys" src="images/RLViz.png" style="max-width: 100%; height: auto; border-radius: 8px;"/>
+    <figcaption style="font-size: 0.9em; color: #555; margin-top: 8px;">
+      <strong>  Interactive visualization communicating causes of racial inequity in Chicago based on an internet discussion mined from the Reddit forum Change My View.</strong> Participants interacted with maps demonstrating how historical redlining practices produced present day income disparities between African Americans and Whites. Participants who interacted with this data narrative demonstrated a signifant shift in post-interaction beliefs about racial inequality, demonstrating how crowdsourced data narratives can be applied to education random populations about social issues. Visualization software used open source software to merge data from the US census and University of Richmond Redline Mapping Project.
+    </figcaption>
+  </figure>
+</div>
+
+<div class="summary">
+<h3>🔍 Quick Summary</h3>
+<ul>
+<li>Apply <strong>data science methods </strong>to extend the causal language of internet arguments to build persuasive arguments serving as educational interventions on misconceptions</li>
+<li>Test argument efficacy in behavioral <strong>experiments with thousands of participants</strong> randomly sampled from the U.S. population</li>
+<li>The crowdsourcing methodology combines NLP, data visualization, and Bayesian modeling to develop scalable, generalizable educational interventions</li>
+</ul>
+</div>
+
+
+<h3>💻 Quick Access to Open Data and Code</h3>
+
+<div class="button-links">
+    <a class="button" href="https://github.com/jpriniski/CMV" target="_blank">📁 P. & Horne (2018) GitHub</a>
+    <a class="button" href=" https://osf.io/v54ut/" target="_blank">📁 P. & Horne (2019) OSF</a>
+    <a class="button" href="https://github.com/jpriniski/CrowdsourcingBeliefSystems" target="_blank">📁 P. & Holyoak (2020) GitHub</a>
+ </div>
+
+
+
+<h3>📄 What this Project Does</h3>
+
+<p>The internet has given rise to conspiracy thinking, AI-generated media, and identity politics, which all have the potential to severely limit democratic decision-making and national consensus. However, not all corners of the internet promote this type of information. This project explores how <strong>naturally occurring arguments on the internet,</strong> including those sourced from communities like Reddit's <em>Change My View,</em> can be used as <strong>data narratives</strong> to correct public misconceptions.</p>
+<p>Using data science methods, I mine and parse online arguments, identify belief-shifting conversations, extract the <strong>narrative and evidentiary structure</strong> of persuasive responses, and repurpose them into <strong>educational interventions tested on randomized populations of Americans.</strong></p>
+<p>Rather than designing corrective messages from scratch and relying on prior academic literature on belief change and higher-level reasoning, this crowdsourcing approach provides a scalable, bottom-up approach to curating corrective information that leverages readily available dynamic online data.</p>
+
+<h3>💡 Key Findings</h3>
+<ul>
+<li>On forums where deliberative norms are embedded in communication channels, users are incentivized to provide evidence for their claims. This evidence can revise people's beliefs about topics spanning gun control, immigration, and racial equality.</li>
+<li>Causal evidence extracted from these conversations can shift beliefs among randomized populations.</li>
+<li>This evidence can be transformed into data narratives that facilitate hands-on learning about socially polarizing topics.</li>
+</ul>
+<h3>🎯 Why It Matters</h3>
+<p>Traditional approaches to correcting public misconceptions use <strong>top-down intervention tactics</strong>. These methods develop slowly, depend heavily on intervention designers' expertise, and often struggle to reach diverse populations with varying beliefs.</p>
+<p>A better approach sources naturalistically validated information to create educational content. This approach enables scalable, AI-assisted designs that can both accelerate misconception correction and uncover novel pathways not yet explored in research.</p>
+<ul>
+<li><strong>Business use case:</strong> Educational organizations and health communication teams can leverage this framework to create messaging based on <strong>real, user-generated reasoning observed on the internet</strong>.</li>
+<li><strong>Research use case:</strong> Cognitive scientists and communication scholars can model <strong>beliefs and predict change mechanisms</strong> in natural settings, using platforms like Reddit as real-world laboratories for studying epistemic reasoning and evidence framing.</li>
+</ul>
+<h3>🛠️ How It Works</h3>
+<ol>
+<li><strong>Source Argument Data:</strong> Collected 30,000+ argument threads from Reddit’s <em>Change My View</em> using the Reddit API and custom NLP pipelines.</li>
+<li><strong>Identify Belief Change Messages:</strong> Developed NLP methods to extract features of corrective content and identify messages marked with a Δ (delta), indicating belief change.</li>
+<li><strong>Recompose as Educational Interventions:</strong> Converted these arguments into persuasive vignettes and interactive data narratives.</li>
+<li><strong>Deploy and Evaluate Interventions:</strong> Tested them with randomized groups (N = 3,000) using pre/post belief assessments.</li>
+<li><strong>Model Belief Updating:</strong> Used multilevel ordinal models to analyze post-intervention belief shifts.</li>
+</ol>
+<h3>📚 Related Publications</h3>
+<p>Click here to view an interactive data narrative based on a Reddit argument that was effective at correcting misconceptions about racial inequality on Change My View and in random samples of Americans.</p>
+<ul>
+<li>Priniski &amp; Horne (2018). <a href="https://escholarship.org/content/qt1076s3b2/qt1076s3b2.pdf">Attitude Change on Reddit’s Change My View</a>. Proceedings of the Cognitive Science Society.</li>
+<li>Priniski &amp; Horne (2019). <a href="https://escholarship.org/content/qt9md9d197/qt9md9d197_noSplash_96dfd4261824b0aee5a3bf6c2e237381.pdf">Crowdsourcing Effective Educational Interventions</a>. Proceedings of the Cognitive Science Society.</li>
+<li>Priniski &amp; Holyoak (2020). <a href="https://escholarship.org/content/qt58d144b1/qt58d144b1.pdf">Crowdsourcing to Analyze Belief Systems Underlying Social Issues</a>. Proceedings of the Cognitive Science Society.</li>
+</ul>
+</div>
+</body>
+</html>

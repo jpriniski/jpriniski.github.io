@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Modeling human beliefs with LLMs</title>
+
+<link href="css/styles.css" rel="stylesheet"/></head>
+<body>
+<div class="container">
+<a href="Portfolio.html">← Back to Projects</a>
+<h1>Modeling human beliefs with LLMs</h1>
+<div class="tags">
+<span class="tag">Belief Modeling</span>
+<span class="tag">NLP</span>
+<span class="tag">Public Health</span>
+</div>
+
+<img alt="Project 1 thumbnail" src="images/Causal-Claims.png" style="width:100%; object-fit:cover; border-radius:6px; margin-bottom:10px;"/>
+
+<div class="summary">
+<h3>🔍 Quick Summary</h3>
+<ul>
+<li>People express causal claims when they believe one thing causes another thing</li>
+<li>People's causal language is a lens onto their beliefs about the world</li>
+<li>State-of-the-art software produces an interactive network visualization of interlocking beliefs using a Large Language Model fine-tuned to causal language</li>
+<li>Software operates over text data and can be applied to personal narratives (e.g., journal entries) or social media</li>
+<li>Software produces interactive belief networks where nodes represent "causal topics" in a corpus of text and edges represent directionality and magnitude of expressed causality</li>
+<li>Applied to public health domain and in experimental contexts</li>
+</ul>
+</div>
+<div class="button-links">
+<a class="button" href="https://causal-claims.isi.edu/" target="_blank">🌐 Try the Demo</a>
+<a class="button" href="https://github.com/ishaanverma/causal-claims-pipeline" target="_blank">📁 View on GitHub</a>
+<a class="button" href="https://aclanthology.org/2023.acl-demo.41/" target="_blank">🎥 Watch the ACL Demo</a>
+</div>
+<h3>🧠 What the Software Does</h3>
+<p>The <strong>Causal Claims Pipeline</strong> is an AI tool that identifies, clusters, and visualizes causal beliefs expressed in natural language. It works on narratives and text documents written by individuals or extracted from platforms like Instagram, Reddit, or TikTok.</p>
+<p>By detecting cause–effect statements and organizing them into an <strong>interactive belief network</strong>, the software reveals how people reason about events in the world. Network information can be downloaded and used in subsequent analyses of user social media engagement, narrative interaction, and individual and group-level human behavior.</p>
+
+<h3>💡 Why Use This Software</h3>
+<p>Beliefs about causal relationships are central to how people interpret events and make decisions. Whether you're analyzing public reactions to vaccines or exploring consumer attitudes about a product, understanding <strong>what people think causes what</strong> gives insight into mental models and decision logic.</p>
+<ul>
+<li><strong>Business use case:</strong> A marketing team analyzes reviews and social media posts to understand perceived causes of satisfaction or frustration.
+        <br/><em>“The update caused my phone to slow down”</em> → flags risks associated with software changes.
+      </li>
+<li><strong>Research use case:</strong> A cognitive scientist studying belief polarization tracks how causal explanations (e.g., <em>“economic downturn caused by immigration”</em>) vary across populations and time.</li>
+</ul>
+<h3>🛠️ How to Use the Software</h3>
+<ol>
+<li><strong>Prepare your dataset:</strong> Format your text data as a .csv file with one column containing the documents (e.g., tweets, articles).</li>
+<li><strong>Upload to the web tool:</strong> Visit <a href="https://causal-claims.isi.edu/" target="_blank">causal-claims.isi.edu</a> and upload your dataset.</li>
+<li><strong>Select your text column:</strong> Choose which column contains the content to be analyzed.</li>
+<li><strong>(Optional) Enable clustering:</strong> Group cause/effect phrases by semantic similarity to reveal high-level topics.</li>
+<li><strong>Submit and process:</strong> Jobs complete in about a minute for thousands of documents.</li>
+<li><strong>Explore the belief network:</strong> View an interactive graph of causal relationships (nodes = concepts, edges = claims).</li>
+<li><strong>Download results:</strong> Export the causal graph as an edge list .csv for further analysis.</li>
+</ol>
+</div>
+</body>
+</html>
