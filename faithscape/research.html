@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research Products</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      padding: 1.5em 1em;
+    }
+
+    h1 {
+      margin-bottom: 0.5em;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 0.8em;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #007acc;
+    }
+
+    nav a.active {
+      color: green;
+      font-weight: 600;
+      border-bottom: 2px solid green;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+
+    details {
+      margin-bottom: 1em;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+      padding: 0.8em 1em;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    summary {
+      font-weight: 600;
+      font-size: 1.2em;
+      cursor: pointer;
+      color: #333;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    summary::marker {
+      display: none;
+    }
+
+    /* Arrow indicator */
+    summary::after {
+      content: "▸";
+      font-size: 1.1em;
+      color: #666;
+      margin-left: 0.5em;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(90deg);
+      color: green;
+    }
+
+    details[open] summary {
+      color: green;
+    }
+
+    p, ul {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+
+    ul li {
+      margin-bottom: 0.3em;
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Mapping and Improving The Psychological Architecture of Religion</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html" class="active">Research Products</a>
+    <a href="bibliography.html">Bibliography</a>
+    <a href="timeline.html">Timeline</a>
+  </nav>
+</header>
+
+<main>
+
+  <details>
+    <summary>RP 1. Annotated Bibliography</summary>
+    <p>
+      Compile a publicly available list of research articles, books, and ephemera. Topics include anthropology of religion, philosophy of technology, cognitive psychology, narrative studies, urban studies, and media theory. Annotations will include summaries and interpretations of text and will provide the theoretical backbone for literature review, statistical analyses in RP 2, and hypothesis testing in RP 4.
+    </p>
+    <p><strong>Deliverable:</strong> Publicly available reading list and commentary that synthesizes state of the literature.</p>
+  </details>
+
+  <details>
+    <summary>RP 2. Expanded Dataset on Megachurches in US</summary>
+    <p>
+      Megachurches are the predominant form of religious practice in suburban America (Wilford, 2011). However, their role in shaping community life, political attitudes, and social behavior remains debated. To clarify their role in shaping family and political life on the suburban frontier, we will build on existing qualitative datasets from anthropology and religious studies to enable systematic statistical analysis and hypothesis testing. In particular, we will extend the Hartford Institute of Religious Research’s database of U.S. megachurches (HIRR, 2024) by first copying-and-pasting their data into a spreadsheet that allows for statistical analysis. Second, we will add additional metadata to the dataset to provide a richer picture on how megachurches situate themselves in the minds and neighborhoods of their congregants. This metadata includes church website information, details on outreach programs, and content from internet-based group discussions (most megachurches have massive online followings that are a rich source of information). Using methods from natural language processing, we will generate analyzable features from these sources and develop interactive data visualizations for exploring relationships in the data. The resulting resource will support statistical analyses of the content of the narratives megachurches communicate in addition to how they position themselves in suburban sprawl.
+    </p>
+    <p><strong>Deliverable:</strong> Interactive map of churches on public website (see RP 3) + peer-reviewed paper building on the literature review in RP1. For previous work of mine on interactive data storytelling, see the <em>Correcting misconceptions with narratives</em> project in my research portfolio.</p>
+  </details>
+
+  <details>
+    <summary>RP 3. Public Website and Communication of Research Findings</summary>
+    <p>
+      The primary form of communication of research findings will be through peer-reviewed publication in academic journals on the topics of psychology, religion, urban and media studies. However, the primary objective of this proposal is to not distill and debate the problems of religion in America today, but to develop grassroots mechanisms for organizing new forms of religious practice and community building. To increase the impact of research findings, we will create a publicly available website that makes data, findings, and opinions available to the public. Research impact can be greatly increased by embedding the project's website and research findings in chat rooms, Reddit discussions, and by sharing on Facebook, Instagram, TikTok.
+    </p>
+    <p><strong>Deliverable:</strong> Publicly facing website, strategies for disseminating findings in real-world networks.</p>
+  </details>
+
+  <details>
+    <summary>RP 4. Survey on Belief, Fragmentation, and Community</summary>
+    <p>
+      The survey serves as the connective tissue between the literature review (RP1), the megachurch dataset (RP2), and the intervention community building blueprint work (RP5). While RP1 and RP2 chart how religious and quasi-religious infrastructures shape communities, the survey will measure individual-level psychological dynamics of belief, fragmentation, and community attachment across contexts. Survey vignettes can be aligned with RP2 data (e.g., sermon text mining) to test hypotheses about megachurch narrative strategies. The survey will allow us to test hypotheses linking religion to beliefs about politics and community. I have discussed related surveys with Dr. Micah Goldwater, who will let us use his Institutional Review Board approval to administer the survey in both the U.S. and Australia. This will allow us to contrast countries where Christianity has had different trajectories of decline and adaptation. Results will inform RP5’s blueprint by identifying which features of religious and secular practices foster belonging versus division and will be communicated to broader audiences.
+    </p>
+
+    <p><strong>Survey Objectives</strong></p>
+    <ul>
+      <li>Measure how individuals perceive the role of religion, megachurches, and secular alternatives in providing community.</li>
+      <li>Identify relationships between exposure to religious narratives, susceptibility to conspiratorial thinking, and political attitudes.</li>
+      <li>Assess whether fragmentation (social roles, digital media, suburban sprawl) predicts lower community attachment and higher vulnerability to polarizing narratives.</li>
+      <li>Compare cross-national differences between the U.S. and Australia to evaluate generalizability.</li>
+    </ul>
+
+    <p><strong>Deliverables</strong></p>
+    <ul>
+      <li>Peer-reviewed article (e.g., <em>Journal for the Scientific Study of Religion</em>, <em>Cognitive Research: Principles & Implications</em>, or <em>Policy & Internet</em>).</li>
+      <li>Open dataset of anonymized responses with survey instruments for replication and extension.</li>
+      <li>Website visualizations comparing U.S. and Australian respondents’ beliefs, community ties, and susceptibility to narratives.</li>
+      <li>Policy-relevant insight brief for urban planners and community organizations on designing secular/faith-based “third spaces.”</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>RP 5. Creative Practices and Blueprint for Making Stories, Cities, Media, and Spiritualities Arch Towards Human Prosperity</summary>
+    <p>
+      It is crucial that we implement solutions to current gaps in how legacy institutions (including, but not limited to, churches, media organizations, academic institutions) in the US provide community and meaning. Proposed solutions should account for why megachurches are the thriving form of religious structure in the US today, while acknowledging how people’s interaction with information systems, screen technology, and ubiquitous digital media shape their social relationships and political decision-making.
+    </p>
+    <p>
+      RP5 synthesizes the findings from the first year of this project by producing an action plan for configuring currently developed land to foster localized stories and community organizing (not those facilitated through top-down mechanisms such as political elites and religious capitalists). To help guide strategies for fostering localized community and sense-making, I propose to have discussions with Dr. Rachel Heaton, professor of Industrial Design at the University of Illinois, who has first-hand experience as a non-religious person finding community through megachurch meetup groups. Her research on applying cognitive psychology principles to improve the design of scalable objects and personal experience with church systems can provide crucial guidance on designing secular and interfaith “third spaces” in fragmented suburban environments.
+    </p>
+    <p><strong>Deliverables:</strong></p>
+    <ul>
+      <li>White paper on a roadmap for improving the psychological architecture of religion and suburban space.</li>
+      <li>Policy blueprints shared at local town halls in Phoenix, Los Angeles, Flagstaff, and Miami, Arizona.</li>
+      <li>Publication of these ideas in peer-reviewed journals such as <em>Policy & Internet</em>.</li>
+      <li>Integration of creative media projects (e.g., Media Slop) applying psychological and media theory in real-world dynamic media environments.</li>
+    </ul>
+  </details>
+
+</main>
+</body>
+</html>
