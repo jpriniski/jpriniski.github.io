@@ -4,38 +4,138 @@
   <meta charset="UTF-8">
   <title>Faithscape</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+  
+
+    /* --- Toast popup --- */
+    #newSageToast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1em 1.5em;
+      max-width: 320px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease, transform 0.3s ease;
+      transform: translateY(10px);
+      z-index: 1000;
+      font-family: sans-serif;
+      text-align: left;
+    }
+
+    #newSageToast.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    #newSageToast p {
+      margin: 0 0 0.8em;
+      color: #333;
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    #newSageToast a {
+      display: inline-block;
+      background: #1a73e8;
+      color: #fff;
+      padding: 0.4em 0.8em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+
+    #newSageToast button {
+      background: none;
+      border: none;
+      color: #666;
+      cursor: pointer;
+      font-size: 0.8em;
+      float: right;
+      margin-top: -0.2em;
+    }
+  </style>
 </head>
+
 <body>
-<header>
-  <h1>♱ Faithscape ♖</h1>
-  <h2>Mapping and Improving The Psychological Architecture of Religion</h2>
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="research.html">Research Products</a>
-    <a href ='megachurches.html'>Megachurch USA</a>
-    <a href="bibliography.html">Bibliography</a>
-    <a href ='azH20.html'>azH20.online</a>
-    <a href="timeline.html">Timeline</a>
-  </nav>
-</header>
+  <header>
+    <h1>♱ Faithscape ♖</h1>
+    <h2>Transforming The Psychological Architecture of Religion</h2>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="research.html">Research Products</a>
+      <a href="megachurches.html">Megachurch USA</a>
+      <a href="bibliography.html">Bibliography</a>
+      <a href="azH20.html">azH20.online</a>
+      <a href="timeline.html">Timeline</a>
+    </nav>
+  </header>
 
-<main>
+  <main>
+    <h2>What is Faithscape</h2>
 
+    Faithscape is a collaborative research and community building project examining how religious practice is expressed in the United States, with direct focus on how the built environment, digital media, and 21st century politics shape people's beliefs, communities, and identity. 
 
-  <h2>Guiding Research Questions</h2>
-  <ul>
-    <li>What are the positive and negative impacts of religion on individuals and society?</li>
-    <li>How are religious practices and narratives shaped by the built environment?</li>
-    <li>How do religions provide meaning and community, and how might these functions be improved, or even replaced, to better support individual and collective prosperity in a fragmenting world?</li>
-  </ul>
-
-  <h2>Overview</h2>
+    <h3>Guiding Questions</h3>
 
 
-Religion is a powerful system for organizing meaning, community, and identity. Even as traditional religious affiliation declines in the United States, religious ways of thinking, and religion’s impact on society at large, have not disappeared and continue to flourish. Religious thinking not only shapes people’s identities and beliefs about the physical and supernatural world, it also shapes voting behaviors, interactions with outsiders, and attitudes towards global affairs. The psychological architecture of religious narratives and community building, what cognitive psychologists call mental models, has a lasting impact on how people interpret scientific and political information as well as how they interact with those deemed inside or outside their social groups. </br></br>
+    <ul>
+      <li>What are the positive and negative impacts of religion on individuals and society?</li>
+      <li>How are religious practices and narratives shaped by the built environment?</li>
+      <li>How do religions provide meaning and community, and how might these functions be improved, or even replaced, to better support individual and collective prosperity in a fragmenting world?</li>
+    </ul>
 
-Faithscape uses publicly available data, surveys, citizen science, and urban design principles to investigate religion as a system of narrative, belief, and community building. It will chart how dominant religions in America build beliefs, identities, cultural practices, and social relationships. It will articulate the real-world impacts of religious stories on political decision making, collective intelligence, and personal well-being. The ultimate goal of this project, however, is to not only identify how and when religions uplift people or lead them astray, but to articulate a vision for improving current practices and infrastructures in the United States today. Inspiration for the future of religion and community development will be drawn from the current proposal’s research findings (i.e., see RP1, 2 and 3 below) and build on teachings from ancient philosophy (Stoicism) and Eastern religion (i.e., Soto Zen) and emerging research in human-centered technology development and urban studies. Religions can either empower or constrain people. This project leverages interdisciplinary methods to understand how religion shapes individuals and societies today and how its psychological and physical architecture might be reimagined to foster healthier forms of community and politics tomorrow.</br>
+    <h2>Where can I read more about Faithscape's findings?</h2>
 
-</main>
+    <p> Project findings, commentary, and opinions are shared every week on the <strong><a href="https://www.newsage.press/" target="_blank"> New Sage</a> </strong>website. By visiting the New Sage <a href="https://www.newsage.press/" target="_blank"> website</a>, you can subscribe to the newsletter for free for updates mailed directly to your email. </br> </br>
+
+    Tabs on this website describe high-level findings from different components of the project (see Research Products tab for complete list). Projects include Megachurch USA, which documents the spatial and story dynamics of megachurch growth in the United States, and our Annotated Bibliography, which is an evolving repository of academic research on cognitive psychology, narrative building, urban design, and religious studies. Annotations on article references boil esoteric language down to common-sense implications for building new spaces and ideas. 
+
+
+
+
+    </p>
+
+    <h2>What makes Faithscape unique?</h2>
+    <p>
+      Religion is a powerful system for organizing meaning, community, and identity. Even as traditional religious affiliation declines in the United States, religious ways of thinking, and religion’s impact on society at large have not disappeared and continue to flourish. Religious thinking not only shapes people’s identities and beliefs about the physical and supernatural world, it also shapes voting behaviors, interactions with outsiders, and attitudes towards global affairs. The psychological architecture of religious narratives and community building, what cognitive psychologists call mental models, has a lasting impact on how people interpret scientific and political information as well as how they interact with those deemed inside or outside their social groups.
+    </p>
+
+    <p>
+      Faithscape uses publicly available data, surveys, citizen science, and urban design principles to investigate religion as a system of narrative, belief, and community building. It will chart how  religious practices and institutions in America build beliefs, identities, cultural practices, and social relationships. Faithscape will articulate the intertwined relationship between the built environment, community organizing, and spiritual understanding -- with a focus on the real-world impacts of religious stories on political decision-making, collective intelligence, and personal well-being. The ultimate goal of this project, however, is to not only identify how and when religions uplift people or lead them astray, but to articulate a vision for improving current practices and infrastructures in the United States today. Inspiration for the future of religion and community development will be drawn from the current proposal’s research findings (i.e., see Reserach Projects tab) and build on teachings from ancient philosophy (Stoicism) and Eastern religion (i.e., Soto Zen) and emerging research in human-centered technology development and urban studies. Religions can either empower or constrain people. This project leverages interdisciplinary methods to understand how religion shapes individuals and societies today and how its psychological and physical architecture might be reimagined to foster healthier forms of community and politics tomorrow.
+    </p>
+  </main>
+
+  <!-- Toast Popup -->
+  <div id="newSageToast">
+    <button id="closeToast">✕</button>
+    <p>
+      <strong>Faithscape</strong> is an ongoing research and community collaboration project.
+      Findings, communications, and opinions are shared weekly at the online newsletter <strong>New Sage</strong>.
+    </p>
+    <a href="https://www.newsage.press/" target="_blank">Visit New Sage →</a>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      const toast = document.getElementById("newSageToast");
+      const closeBtn = document.getElementById("closeToast");
+
+      // Show toast after 2 seconds
+      setTimeout(() => toast.classList.add("show"), 2000);
+
+      // Hide after 12 seconds automatically
+      //setTimeout(() => toast.classList.remove("show"), 14000);
+
+      // Close manually
+      closeBtn.addEventListener("click", () => toast.classList.remove("show"));
+    });
+  </script>
 </body>
 </html>
