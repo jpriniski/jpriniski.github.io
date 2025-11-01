@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>azH2O.online</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<header>
+  <h1>♱ Faithscape ♱</h1>
+  <h2>azH2O.online</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="research.html" >Research Products</a>
+    <a href ='megachurches.html'>Megachurch USA</a>
+    <a href="bibliography.html">Bibliography</a>
+    <a href ='azH2O.html' class = active>azH20.online</a>
+    <a href="timeline.html">Timeline</a>
+  </nav>
+</header>
+
+<main>
+
+  <details open>
+    <summary>Project Overview</summary>
+    <p>
+      Hunter’s website, <strong>azH2O</strong>, will crowdsource personal narratives of water memories and usage through a QR code installed on <em>“The Well.”</em> 
+      Using state-of-the-art technology, the platform will visualize the stories embedded in users’ personal narratives, creating in real time 
+      an interactive collective narrative about how Arizonans make sense of their relationship to water and their expectations for water policy.
+    </p>
+    <p>
+      As described in the User Story, the interactive data story <em>My Water, My Culture</em> motivates participation through giving and learning — hearing and being heard. 
+      Users contribute their own data through narrative and, in exchange, learn about others’ connections to water. 
+      Following the old adage: “give data, get a cookie; give more data, get a bigger cookie.”
+    </p>
+  </details>
+
+  <details>
+    <summary>User Story</summary>
+    <p><strong>AZWATER LIFE - User Story</strong></p>
+    <p>A participant walks up to the well installation, scans a QR code, and is taken to a lightweight web app.</p>
+
+    <p><strong>Phase 1: Question Input</strong></p>
+    <ul>
+      <li>They are asked to submit two questions about water:</li>
+      <li>A word or phrase describing thoughts about water in Arizona</li>
+      <li>A word or phrase describing feelings about water in childhood</li>
+      <li>The system saves these responses and instantly shows an interactive network visualization linking their questions to others’.</li>
+    </ul>
+
+    <p><strong>Phase 2: Digital Network Survey</strong></p>
+    <ul>
+      <li>After exploring the network, participants complete a brief survey on their use of digital networks (frequency, purpose, etc.).</li>
+      <li>Their responses are compared to aggregate public datasets (Pew Research, Statista), shown in static comparative graphs, along with an estimate of water usage derived from digital footprint data.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Budget Overview</summary>
+
+    <p><strong>Project Budget:</strong> $2,500 – $5,000 + monthly costs ranging from $100–$500 depending on website traffic.</p>
+
+    <p><strong>Labor:</strong> Hunter’s total labor costs at $50/hour for a polished pilot (stable, user-friendly): 
+    $2,500–$5,000 (~50–100 hrs)</p>
+
+    <p><strong>Expected Website Costs:</strong></p>
+    <ul>
+      <li><em>Small-scale pilot:</em> $0–$100/month</li>
+      <li><em>Scaling up (hundreds of users/day):</em> $100–$500/month depending on traffic and model queries</li>
+    </ul>
+
+    <h3 style="margin-left:1em;">Component Cost Table</h3>
+
+    <table>
+      <tr>
+        <th>Component</th>
+        <th>Option / Provider</th>
+        <th>Cost Estimate</th>
+      </tr>
+      <tr>
+        <td>Domain + Hosting</td>
+        <td>Vercel / Netlify / GitHub Pages</td>
+        <td>Free – $20</td>
+      </tr>
+      <tr>
+        <td>QR Code Generator</td>
+        <td>Open-source / Free online tools</td>
+        <td>Free</td>
+      </tr>
+      <tr>
+        <td>Backend Database</td>
+        <td>Firebase (Free tier up to 50k reads)</td>
+        <td>Free – $25</td>
+      </tr>
+      <tr>
+        <td>Model Hosting</td>
+        <td>HuggingFace Spaces (Gradio/Streamlit)</td>
+        <td>Free – $9</td>
+      </tr>
+      <tr>
+        <td>Vector Similarity Search</td>
+        <td>In-memory (small scale) / Pinecone</td>
+        <td>Free – $30</td>
+      </tr>
+      <tr>
+        <td>Visualization (JS library)</td>
+        <td>D3.js / Cytoscape.js (open-source)</td>
+        <td>Free</td>
+      </tr>
+      <tr>
+        <td>Survey & Analytics</td>
+        <td>Built-in forms + Firebase storage</td>
+        <td>Free – $10</td>
+      </tr>
+      <tr>
+        <td>Public Data Access</td>
+        <td>Pew / Statista datasets (static files)</td>
+        <td>Free – $50 (if licensed)</td>
+      </tr>
+      <tr>
+        <td>Miscellaneous (SSL, bandwidth)</td>
+        <td>Included in hosting</td>
+        <td>Free – $10</td>
+      </tr>
+    </table>
+  </details>
+
+</main>
+</body>
+</html>
