@@ -94,29 +94,29 @@
   </label>
   <label>Jump to scenario:
     <select id="scenarioSelect">
-      <option value="20-medeng">20-medeng</option>
-      <option value="233-ama">233-ama</option>
-      <option value="244-ama">244-ama</option>
-      <option value="36-medeng">36-medeng</option>
-      <option value="370-ama">370-ama</option>
-      <option value="406-ama">406-ama</option>
-      <option value="5-john">5-john</option>
-      <option value="65-scug">65-scug</option>
-      <option value="80-medeng">80-medeng</option>
+      <option value="20-medeng">Tea Channel Coverage of Astroworld (20-medeng)</option>
+      <option value="233-ama">Mandatory Genetic Testing (Healthcare Workers) (233-ama)</option>
+      <option value="244-ama">End-of-Life Treatment Decisions (244-ama)</option>
+      <option value="36-medeng">Satire vs. Reputation Lawsuit (36-medeng)</option>
+      <option value="370-ama">Anesthesia Risk Disclosure (370-ama)</option>
+      <option value="406-ama">Age-Based Knee Replacement Allocation (406-ama)</option>
+      <option value="5-john">Hostile Work Environment (Law Firm) (5-john)</option>
+      <option value="65-scug">Affordable Housing vs. Cherry Orchard (65-scug)</option>
+      <option value="80-medeng">Microtransactions & Loot Boxes (80-medeng)</option>
     </select>
   </label>
 </div>
 
 <div class="tab-bar" id="tabBar">
-  <div class="tab" data-sid="20-medeng" onclick="showTab('20-medeng')">20-medeng</div>
-  <div class="tab" data-sid="233-ama" onclick="showTab('233-ama')">233-ama</div>
-  <div class="tab" data-sid="244-ama" onclick="showTab('244-ama')">244-ama</div>
-  <div class="tab" data-sid="36-medeng" onclick="showTab('36-medeng')">36-medeng</div>
-  <div class="tab" data-sid="370-ama" onclick="showTab('370-ama')">370-ama</div>
-  <div class="tab" data-sid="406-ama" onclick="showTab('406-ama')">406-ama</div>
-  <div class="tab" data-sid="5-john" onclick="showTab('5-john')">5-john</div>
-  <div class="tab" data-sid="65-scug" onclick="showTab('65-scug')">65-scug</div>
-  <div class="tab" data-sid="80-medeng" onclick="showTab('80-medeng')">80-medeng</div>
+  <div class="tab" data-sid="20-medeng" onclick="showTab('20-medeng')">Tea Channel Coverage of Astroworld (20-medeng)</div>
+  <div class="tab" data-sid="233-ama" onclick="showTab('233-ama')">Mandatory Genetic Testing (Healthcare Workers) (233-ama)</div>
+  <div class="tab" data-sid="244-ama" onclick="showTab('244-ama')">End-of-Life Treatment Decisions (244-ama)</div>
+  <div class="tab" data-sid="36-medeng" onclick="showTab('36-medeng')">Satire vs. Reputation Lawsuit (36-medeng)</div>
+  <div class="tab" data-sid="370-ama" onclick="showTab('370-ama')">Anesthesia Risk Disclosure (370-ama)</div>
+  <div class="tab" data-sid="406-ama" onclick="showTab('406-ama')">Age-Based Knee Replacement Allocation (406-ama)</div>
+  <div class="tab" data-sid="5-john" onclick="showTab('5-john')">Hostile Work Environment (Law Firm) (5-john)</div>
+  <div class="tab" data-sid="65-scug" onclick="showTab('65-scug')">Affordable Housing vs. Cherry Orchard (65-scug)</div>
+  <div class="tab" data-sid="80-medeng" onclick="showTab('80-medeng')">Microtransactions & Loot Boxes (80-medeng)</div>
 </div>
 
 <div class="panel" id="panel-20-medeng"><div id="content-20-medeng"></div></div>
@@ -130,7 +130,7 @@
 <div class="panel" id="panel-80-medeng"><div id="content-80-medeng"></div></div>
 
 <script>
-const RAW = {
+const RAW    = {
   "20-medeng": {
     "rows": [
       {
@@ -11296,6 +11296,7 @@ const RAW = {
     "perspective_b": "Allow microtransactions and loot boxes as optional purchases, emphasizing player choice, market demand, and the benefits of subsidizing free content and sustaining game communities."
   }
 };
+const LABELS = {"20-medeng": "Tea Channel Coverage of Astroworld (20-medeng)", "233-ama": "Mandatory Genetic Testing (Healthcare Workers) (233-ama)", "244-ama": "End-of-Life Treatment Decisions (244-ama)", "36-medeng": "Satire vs. Reputation Lawsuit (36-medeng)", "370-ama": "Anesthesia Risk Disclosure (370-ama)", "406-ama": "Age-Based Knee Replacement Allocation (406-ama)", "5-john": "Hostile Work Environment (Law Firm) (5-john)", "65-scug": "Affordable Housing vs. Cherry Orchard (65-scug)", "80-medeng": "Microtransactions & Loot Boxes (80-medeng)"};
 
 const PERSONA_COLORS = {"Strong A": "#2166ac", "Weak A": "#74add1", "Neutral": "#969696", "Weak B": "#f4a582", "Strong B": "#d6604d"};
 const PERSONAS = ["Strong A","Weak A","Neutral","Weak B","Strong B"];
@@ -11320,6 +11321,7 @@ function renderPanel(sid) {
   const maxTotal = Math.max(...d.rows.map(r=>r.Total), 1);
 
   const perspHtml = `
+    <h2 style="margin-top:18px;font-size:1.05rem;font-weight:700;color:#1e2a3a">${escHtml(LABELS[sid])}</h2>
     <div class="perspectives">
       <div class="persp-box persp-a">
         <div class="persp-label" style="color:#2166ac">Perspective A</div>
