@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Consulting and research collaborations — Hunter Priniski, PhD"/>
+  <title>Consulting · Hunter Priniski</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <style>
+    .consult-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border-mid);
+      border: 1px solid var(--border-mid);
+      margin: 48px 0;
+    }
+    .consult-card {
+      background: var(--surface);
+      padding: 32px;
+    }
+    .consult-card h3 {
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--lime);
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .consult-card p {
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+    .consult-card ul {
+      list-style: none;
+      font-size: 12px;
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .consult-card ul li {
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+    .consult-card ul li::before {
+      content: '>';
+      position: absolute;
+      left: 0;
+      color: var(--lime-dim);
+    }
+    .consult-card strong { color: var(--text-bright); }
+    .rate {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--lime);
+      border: 1px solid var(--lime-dim);
+      display: inline-block;
+      padding: 5px 12px;
+      margin-top: 8px;
+    }
+    @media (max-width: 640px) {
+      .consult-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">PRINISKI.COM<span class="cursor"></span></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Research</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="nav-status">
+      <span class="status-dot"></span>UCLA POSTDOC · 2026
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-eyebrow">// SERVICES &amp; COLLABORATIONS</div>
+    <h1>Consulting</h1>
+    <p>
+      I am a world leader in transforming media interaction data into business and research value.
+      I develop innovative, tailored solutions through behavioral modeling, data visualization,
+      and AI tool development. If you could use my services, or are looking for interdisciplinary
+      research collaborations, please email me at
+      <a href="mailto:priniski@ucla.edu">priniski@ucla.edu</a>.
+    </p>
+  </section>
+
+  <div class="consult-grid">
+    <div class="consult-card">
+      <h3>Business Consulting</h3>
+      <p>
+        I apply 10 years of experience in data science, survey methodology, behavioral modeling,
+        and web-data analysis. I have experience in academic, government, and private industry
+        domains. Services include, but are not limited to:
+      </p>
+      <ul>
+        <li>Conducting product surveys, randomized experiments, and A/B tests on web traffic</li>
+        <li>Developing custom AI solutions for websites and small business communication networks</li>
+        <li>Building interactive data stories that clearly communicate trends from A/B tests, attitude surveys, and personal narratives</li>
+      </ul>
+      <div class="rate">~$250 / hour + costs</div>
+    </div>
+
+    <div class="consult-card">
+      <h3>Research Collaborations</h3>
+      <p>
+        I seek research collaborators and industry partners pushing the cutting edge of network
+        technology, AI, and narrative science. I am actively applying for grants with co-PIs
+        across institutions and welcome opportunities to contribute to funded projects as a
+        research specialist. Services include:
+      </p>
+      <ul>
+        <li>Conducting statistical analysis, NLP, and modeling on previously collected data</li>
+        <li>Quantitative assessment of AI alignment with human and institution objectives</li>
+        <li>Developing surveys and experiments to collect behavioral and AI interaction data</li>
+      </ul>
+      <div class="rate">Grant dependent</div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Hunter Priniski &nbsp;·&nbsp; priniski@ucla.edu &nbsp;·&nbsp; UCLA Postdoctoral Fellow
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
