@@ -62,8 +62,82 @@
       padding: 5px 12px;
       margin-top: 8px;
     }
+
+    /* ─── CONTACT FORM ──────────────────────────── */
+    .contact-section {
+      margin-top: 56px;
+    }
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border-mid);
+      border: 1px solid var(--border-mid);
+      margin-top: 28px;
+    }
+    .form-field {
+      background: var(--surface);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+    .form-field label {
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--lime);
+      padding: 12px 16px 0;
+    }
+    .form-field input,
+    .form-field textarea {
+      font-family: 'IBM Plex Mono', 'Courier New', monospace;
+      font-size: 13px;
+      color: var(--text-bright);
+      background: transparent;
+      border: none;
+      padding: 8px 16px 14px;
+      outline: none;
+      resize: none;
+      line-height: 1.7;
+      transition: background 0.15s;
+    }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      color: var(--text-dim);
+    }
+    .form-field:focus-within {
+      background: var(--surface-2);
+    }
+    .form-field textarea {
+      min-height: 140px;
+    }
+    .form-submit {
+      grid-column: 1 / -1;
+      background: var(--surface);
+      padding: 20px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .form-submit p {
+      font-size: 11px;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+    .form-submit p a {
+      color: var(--lime);
+      text-decoration: none;
+      border-bottom: 1px solid var(--lime-dim);
+    }
+
     @media (max-width: 640px) {
       .consult-grid { grid-template-columns: 1fr; }
+      .contact-form { grid-template-columns: 1fr; }
+      .form-submit { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -87,17 +161,17 @@
 </header>
 
 <main>
-  <section class="hero">
+  <div class="portfolio-header">
     <div class="hero-eyebrow">// SERVICES &amp; COLLABORATIONS</div>
     <h1>Consulting</h1>
     <p>
       I am a world leader in transforming media interaction data into business and research value.
       I develop innovative, tailored solutions through behavioral modeling, data visualization,
       and AI tool development. If you could use my services, or are looking for interdisciplinary
-      research collaborations, please email me at
-      <a href="mailto:priniski@ucla.edu">priniski@ucla.edu</a>.
+      research collaborations, use the form below or email me directly at
+      <a href="mailto:j.priniski@gmail.com" style="color:var(--lime);text-decoration:none;border-bottom:1px solid var(--lime-dim);">j.priniski@gmail.com</a>.
     </p>
-  </section>
+  </div>
 
   <div class="consult-grid">
     <div class="consult-card">
@@ -130,6 +204,38 @@
       </ul>
       <div class="rate">Grant dependent</div>
     </div>
+  </div>
+
+  <div class="contact-section">
+    <div class="section-divider"><h2>Get in Touch</h2></div>
+
+    <!-- Formspree: sign up at formspree.io, create a form, and replace YOUR_FORM_ID below -->
+    <form class="contact-form" action="https://formspree.io/f/xyklblqo" method="POST">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required/>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required/>
+      </div>
+      <div class="form-field">
+        <label for="org">Organization</label>
+        <input type="text" id="org" name="organization" placeholder="Company, university, or independent"/>
+      </div>
+      <div class="form-field">
+        <label for="type">Inquiry Type</label>
+        <input type="text" id="type" name="inquiry_type" placeholder="Business consulting, research collaboration, other…"/>
+      </div>
+      <div class="form-field full">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Describe what you're working on and how I can help…" required></textarea>
+      </div>
+      <div class="form-submit">
+        <p>Responses within 48 hours. Prefer email? <a href="mailto:j.priniski@gmail.com">j.priniski@gmail.com</a></p>
+        <button class="button" type="submit">Send Message →</button>
+      </div>
+    </form>
   </div>
 </main>
 
