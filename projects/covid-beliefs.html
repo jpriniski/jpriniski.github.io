@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COVID-19 Belief Networks · Hunter Priniski</title>
+  <link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="nav-brand" href="../index.html">PRINISKI.COM<span class="cursor"></span></a>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../portfolio.html">Research</a></li>
+        <li><a href="../consulting.html">Consulting</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="nav-status">
+      <span class="status-dot"></span>UCLA POSTDOC · 2026
+    </div>
+  </div>
+</header>
+
+<div class="project-wrap">
+  <a class="back-link" href="../portfolio.html">← Back to Research Portfolio</a>
+
+  <h1>COVID-19 Belief Networks</h1>
+
+  <div class="tags">
+    <span class="tag">Surveys</span>
+    <span class="tag">Belief Modeling</span>
+    <span class="tag">Public Health</span>
+    <span class="tag">Bayesian Models</span>
+  </div>
+
+  <div class="summary">
+    <h3>// Quick Summary</h3>
+    <ul>
+      <li>Surveyed over 2,000 U.S. participants' beliefs about COVID-19 severity, political distrust, and medical skepticism prior to and during the first wave of cases</li>
+      <li>Identified two preexisting distrust types: medical and political</li>
+      <li>Bayesian models reveal that vaccine and political distrust existed prior to the pandemic's first wave in the U.S.</li>
+      <li>Distrust expanded to include large medical organizations over the course of the pandemic</li>
+      <li>Medical misinformation targeted lingering anti-science views</li>
+    </ul>
+  </div>
+
+  <div class="button-links">
+    <a class="button" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0263191" target="_blank">Read Publication</a>
+    <a class="button" href="https://github.com/jpriniski/DarkeningSpring" target="_blank">GitHub — Reproduce Results</a>
+  </div>
+
+  <h3>Key Findings</h3>
+
+  <strong>Lingering distrust in Democratic politicians most strongly predicted COVID-19 skepticism during the first wave of cases</strong>
+  <figure>
+    <img src="../assets/images/journal.pone.0263191.g003.PNG" alt="Histograms of strongest predictors of pre-wave COVID-19 skepticism"/>
+    <figcaption>
+      Histograms of three strongest predictors of pre-wave COVID-19 skepticism and their relation
+      to political ideology. Regression lines represent effect size estimates conditioned on the
+      average response for the remaining predictors in the maximal model. Error regions represent
+      95% credible intervals. Participant-level averaged responses on the scales for those who
+      identified as socially liberal (blue) and conservative (red) are jittered with kernel density
+      plots representing the distribution of responses for each predictor.
+    </figcaption>
+  </figure>
+
+  <strong>During the first wave of cases, COVID-19 skepticism became entrenched in a wider array of auxiliary beliefs</strong>
+  <figure>
+    <img src="../assets/images/journal.pone.0263191.g008.PNG" alt="Histograms of strongest predictors of first-wave COVID-19 skepticism"/>
+    <figcaption>
+      Histograms of five strongest predictors of first-wave COVID-19 skepticism and their relation
+      to political ideology. Scale labels are recoded for readability from the original 7-point
+      Likert scale (Strongly Disagree = Low, Neither Agree nor Disagree = Unsure, Strongly Agree = High).
+    </figcaption>
+  </figure>
+
+  <strong>Summary of survey findings</strong>
+  <ul>
+    <li>Two coherent belief networks emerged: one pro-science, one skeptical</li>
+    <li>Distrust in scientists and politicians predicted COVID-19 skepticism, even after controlling for partisanship</li>
+    <li>Beliefs were internally coherent, even if incorrect by scientific standards</li>
+    <li>Distrust expanded to include large medical organizations over the course of the pandemic</li>
+    <li>Medical misinformation targeted lingering anti-science views</li>
+  </ul>
+
+  <h3>Why It Matters</h3>
+  <p>
+    People interpret scientific information through systems of beliefs. This study shows how belief
+    systems update over the course of complex chains of events. Bayesian models fit to survey
+    responses gathered prior to and during the first wave of cases demonstrate how internally
+    coherent sets of beliefs can lead individuals to <strong>radically different conclusions</strong>
+    about science, health, and public policy.
+  </p>
+  <ul>
+    <li><strong>Public health use case:</strong> Understanding how belief systems shape vaccine hesitancy or mask resistance allows health organizations to design better communication strategies that account for <strong>underlying distrust</strong> and broader belief systems.</li>
+    <li><strong>Research use case:</strong> A behavioral scientist modeling political narrative interaction can apply the modeling framework to explore how <strong>clusters of belief</strong> influence evidence assimilation, belief change, and reasoning about social issues.</li>
+  </ul>
+
+  <hr/>
+
+  <h3>How the Study Was Conducted</h3>
+
+  <strong>Surveys administered in early 2020 allowed for identification of lingering belief networks shaping COVID-19 attitudes</strong>
+  <figure>
+    <img src="../assets/images/journal.pone.0263191.g001 (1).PNG" alt="Survey administration dates relative to COVID-19 case counts"/>
+    <figcaption>
+      Dates on which surveys were administered in relation to rolling 7-day average of reported
+      COVID-19 cases in the U.S. during 2020. Case data provided by the COVID-19 data repository
+      at the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University.
+    </figcaption>
+  </figure>
+
+  <strong>Survey questions were designed to probe a variety of beliefs related to COVID-19, political ideology, and medical distrust</strong>
+  <figure>
+    <img src="../assets/images/journal.pone.0263191.t001.PNG" alt="Examples of survey questions on nine scales"/>
+    <figcaption>
+      Examples of questions on nine scales designed to assess attitudes related to COVID-19.
+    </figcaption>
+  </figure>
+
+  <ol>
+    <li><strong>Survey Design:</strong><br/>
+    Developed a 62-item belief inventory covering science, medicine, politics, and pandemic-specific topics (e.g., lockdowns, vaccines, mortality).</li>
+
+    <li><strong>Participant Sample:</strong><br/>
+    Recruited a <strong>nationally representative</strong> U.S. sample (N = 2,014) in April–May 2020 via YouGov.</li>
+
+    <li><strong>Bayesian Coherence Modeling:</strong><br/>
+    Used Bayesian multilevel models to evaluate how belief systems cohered within individuals and across the population.</li>
+
+    <li><strong>Open Science:</strong><br/>
+    All materials and data are available via Open Science Framework. Download the R script and survey data at the GitHub repository linked above.</li>
+  </ol>
+
+  <iframe
+    src="https://mfr.osf.io/render?url=https%3A%2F%2Fosf.io%2Fdownload%2Fw9vu2%2F%3Fdirect%26mode%3Drender"
+    width="100%"
+    scrolling="yes"
+    height="677px"
+    marginheight="0"
+    frameborder="0"
+    allowfullscreen
+    webkitallowfullscreen
+    style="border: 1px solid var(--border-mid); margin-top: 24px;"
+  ></iframe>
+</div>
+
+<footer>
+  &copy; 2025 Hunter Priniski &nbsp;·&nbsp; priniski@ucla.edu &nbsp;·&nbsp; UCLA Postdoctoral Fellow
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
