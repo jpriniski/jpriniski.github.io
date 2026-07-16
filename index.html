@@ -1,17 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <link rel="canonical" href="https://prin
-iski.c
-  <meta http-equiv="refresh" content="0; u
-rl=htt
-  <title>Hunter Priniski, PhD</title>
-  <scrhttps:/
-/priniski.com/")</script>
-</head
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>priniski.com</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: radial-gradient(ellipse at center, #0d0035 0%, #04000f 55%, #000005 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .scene {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+
+        .orb {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 30%, #fffde7, #ffd700, #c8930a, #7a5400);
+            box-shadow:
+                0 0 30px 12px rgba(255, 215, 0, 0.65),
+                0 0 70px 28px rgba(255, 165, 0, 0.35),
+                0 0 130px 50px rgba(218, 165, 32, 0.15),
+                inset 0 0 30px rgba(255, 255, 255, 0.2);
+        }
+
+@keyframes blink {
+            0%   { transform: translate(-50%, -50%) scaleY(1); }
+            30%  { transform: translate(-50%, -50%) scaleY(0.04); }
+            60%  { transform: translate(-50%, -50%) scaleY(0.04); }
+            100% { transform: translate(-50%, -50%) scaleY(1); }
+        }
+
+        .orb.blinking {
+            animation: blink 0.32s ease-in-out forwards;
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        @keyframes orbit {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        .text-ring {
+            transform-origin: 250px 250px;
+            animation: orbit 18s linear infinite;
+        }
+    </style>
+</head>
 <body>
-  <a hedirect
-ing to priniski.com…</a>
-</body
+    <div class="scene">
+        <div class="orb" id="orb">
+        </div>
+        <svg viewBox="0 0 500 500">
+            <defs>
+                <path id="topArc" d="M 95,250 A 155,155 0 0,1 405,250"/>
+                <path id="botArc" d="M 95,250 A 155,155 0 0,0 405,250"/>
+            </defs>
+
+            <g class="text-ring">
+                <text font-family="'Arial Black', Arial, sans-serif"
+                      font-size="17" font-weight="900"
+                      fill="#FFD700" letter-spacing="1">
+                    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+                        My site has moved to priniski.com
+                    </textPath>
+                </text>
+
+                <text font-family="'Arial Black', Arial, sans-serif"
+                      font-size="17" font-weight="900"
+                      fill="#FFD700" letter-spacing="1">
+                    <textPath href="#botArc" startOffset="50%" text-anchor="middle">
+                        click anywhere on screen to be directed
+                    </textPath>
+                </text>
+            </g>
+        </svg>
+    </div>
+    <script>
+        (function () {
+            /* ---------- stars ---------- */
+            const cx = window.innerWidth  / 2;
+            const cy = window.innerHeight / 2;
+            const glowRadius = 175;
+
+            let placed = 0, tries = 0;
+            while (placed < 140 && tries < 3000) {
+                tries++;
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+                const dx = x - cx, dy = y - cy;
+                if (dx * dx + dy * dy < glowRadius * glowRadius) continue;
+
+                const big  = Math.random() > 0.82;
+                const size = big ? 2 : 1;
+                const s = document.createElement('div');
+                s.style.cssText =
+                    'position:fixed;pointer-events:none;' +
+                    'width:' + size + 'px;height:' + size + 'px;' +
+                    'background:#fff;' +
+                    'left:' + x.toFixed(1) + 'px;' +
+                    'top:'  + y.toFixed(1) + 'px;' +
+                    'opacity:' + (0.3 + Math.random() * 0.7).toFixed(2) + ';' +
+                    (big ? 'box-shadow:0 0 3px 1px rgba(180,180,255,0.5);' : '');
+                document.body.appendChild(s);
+                placed++;
+            }
+
+            /* ---------- blink then navigate ---------- */
+            let blinking = false;
+            document.addEventListener('click', function () {
+                if (blinking) return;
+                blinking = true;
+                orb.classList.add('blinking');
+                setTimeout(function () {
+                    window.location.href = 'https://priniski.com';
+                }, 420);
+            });
+        })();
+    </script>
+</body>
 </html>
