@@ -12,146 +12,11 @@
   <meta property="og:description" content="Research consulting and collaborations with Hunter Priniski, cognitive scientist and data scientist."/>
   <meta property="og:image" content="https://priniski.com/assets/images/hunter-priniski.jpeg"/>
   <link rel="stylesheet" href="css/styles.css"/>
-  <style>
-    .consult-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--border-mid);
-      border: 1px solid var(--border-mid);
-      margin: 48px 0;
-    }
-    .consult-card {
-      background: var(--surface);
-      padding: 32px;
-    }
-    .consult-card h3 {
-      font-size: 10px;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--lime);
-      margin-bottom: 18px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-    }
-    .consult-card p {
-      font-size: 13px;
-      line-height: 1.85;
-      color: var(--text);
-      margin-bottom: 14px;
-    }
-    .consult-card ul {
-      list-style: none;
-      font-size: 12px;
-      line-height: 1.85;
-      color: var(--text);
-      margin-bottom: 16px;
-    }
-    .consult-card ul li {
-      padding-left: 16px;
-      position: relative;
-      margin-bottom: 6px;
-    }
-    .consult-card ul li::before {
-      content: '>';
-      position: absolute;
-      left: 0;
-      color: var(--lime-dim);
-    }
-    .consult-card strong { color: var(--text-bright); }
-    .rate {
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      color: var(--lime);
-      border: 1px solid var(--lime-dim);
-      display: inline-block;
-      padding: 5px 12px;
-      margin-top: 8px;
-    }
-
-    /* ─── CONTACT FORM ──────────────────────────── */
-    .contact-section {
-      margin-top: 56px;
-    }
-    .contact-form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--border-mid);
-      border: 1px solid var(--border-mid);
-      margin-top: 28px;
-    }
-    .form-field {
-      background: var(--surface);
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-    }
-    .form-field.full {
-      grid-column: 1 / -1;
-    }
-    .form-field label {
-      font-size: 9px;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--lime);
-      padding: 12px 16px 0;
-    }
-    .form-field input,
-    .form-field textarea {
-      font-family: 'IBM Plex Mono', 'Courier New', monospace;
-      font-size: 13px;
-      color: var(--text-bright);
-      background: transparent;
-      border: none;
-      padding: 8px 16px 14px;
-      outline: none;
-      resize: none;
-      line-height: 1.7;
-      transition: background 0.15s;
-    }
-    .form-field input::placeholder,
-    .form-field textarea::placeholder {
-      color: var(--text-dim);
-    }
-    .form-field:focus-within {
-      background: var(--surface-2);
-    }
-    .form-field textarea {
-      min-height: 140px;
-    }
-    .form-submit {
-      grid-column: 1 / -1;
-      background: var(--surface);
-      padding: 20px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .form-submit p {
-      font-size: 11px;
-      color: var(--text-dim);
-      line-height: 1.6;
-    }
-    .form-submit p a {
-      color: var(--lime);
-      text-decoration: none;
-      border-bottom: 1px solid var(--lime-dim);
-    }
-
-    @media (max-width: 640px) {
-      .consult-grid { grid-template-columns: 1fr; }
-      .contact-form { grid-template-columns: 1fr; }
-      .form-submit { flex-direction: column; align-items: flex-start; }
-    }
-  </style>
 </head>
 <body>
 
 <header>
   <div class="nav-inner">
-    <a class="nav-brand" href="index.html">PRINISKI.COM<span class="cursor"></span></a>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -160,9 +25,6 @@
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
-    <div class="nav-status">
-      <span class="status-dot"></span>UCLA POSTDOC · 2026
-    </div>
   </div>
 </header>
 
@@ -170,11 +32,10 @@
   <div class="portfolio-header">
     <h1>Consulting</h1>
     <p>
-      I am a world leader in transforming media interaction data into business and research value.
-      I develop innovative, tailored solutions through behavioral modeling, data visualization,
-      and AI tool development. If you could use my services, or are looking for interdisciplinary
-      research collaborations, use the form below or email me directly at
-      <a href="mailto:j.priniski@gmail.com" style="color:var(--lime);text-decoration:none;border-bottom:1px solid var(--lime-dim);">j.priniski@gmail.com</a>.
+      I transform media interaction data into business and research value through behavioral
+      modeling, data visualization, and AI tool development. For services or interdisciplinary
+      research collaborations, use the form below or email
+      <a href="mailto:j.priniski@gmail.com">j.priniski@gmail.com</a>.
     </p>
   </div>
 
@@ -212,7 +73,6 @@
   <div class="contact-section">
     <div class="section-divider"><h2>Get in Touch</h2></div>
 
-    <!-- Formspree: sign up at formspree.io, create a form, and replace YOUR_FORM_ID below -->
     <form class="contact-form" action="https://formspree.io/f/xyklblqo" method="POST">
       <div class="form-field">
         <label for="name">Name</label>
@@ -243,7 +103,7 @@
 </main>
 
 <footer>
-  &copy; 2025 Hunter Priniski &nbsp;·&nbsp; priniski@ucla.edu &nbsp;·&nbsp; UCLA Postdoctoral Fellow
+  &copy; 2026 Hunter Priniski &nbsp;·&nbsp; priniski@ucla.edu &nbsp;·&nbsp; UCLA Postdoctoral Fellow
 </footer>
 
 <script src="assets/js/site.js"></script>

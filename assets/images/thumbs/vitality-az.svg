@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="sphere" cx="36%" cy="30%" r="70%" fx="36%" fy="30%">
+      <stop offset="0%"   stop-color="#FFFCDC"/>
+      <stop offset="18%"  stop-color="#F2D050"/>
+      <stop offset="45%"  stop-color="#CFA020"/>
+      <stop offset="72%"  stop-color="#9A6E0A"/>
+      <stop offset="100%" stop-color="#4A2E02"/>
+    </radialGradient>
+    <radialGradient id="ambient" cx="50%" cy="50%" r="50%">
+      <stop offset="55%" stop-color="rgba(210,160,10,0)"/>
+      <stop offset="100%" stop-color="rgba(210,160,10,0.12)"/>
+    </radialGradient>
+    <filter id="drop" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="2" dy="8" stdDeviation="10" flood-color="#3A2200" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <circle cx="100" cy="104" r="72" fill="url(#ambient)"/>
+  <circle cx="100" cy="100" r="68" fill="url(#sphere)" filter="url(#drop)"/>
+  <ellipse cx="76" cy="73" rx="22" ry="14" fill="white" opacity="0.28" transform="rotate(-18 76 73)"/>
+  <ellipse cx="70" cy="68" rx="8" ry="5" fill="white" opacity="0.18" transform="rotate(-18 70 68)"/>
+</svg>
