@@ -64,15 +64,6 @@
             overflow: visible;
         }
 
-        @keyframes orbit {
-            from { transform: rotate(0deg); }
-            to   { transform: rotate(360deg); }
-        }
-
-        .text-ring {
-            transform-origin: 250px 250px;
-            animation: orbit 18s linear infinite;
-        }
     </style>
 </head>
 <body>
@@ -85,23 +76,21 @@
                 <path id="botArc" d="M 95,250 A 155,155 0 0,0 405,250"/>
             </defs>
 
-            <g class="text-ring">
-                <text font-family="'Arial Black', Arial, sans-serif"
-                      font-size="17" font-weight="900"
-                      fill="#FFD700" letter-spacing="1">
-                    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
-                        My site has moved to priniski.com
-                    </textPath>
-                </text>
+            <text font-family="'Arial Black', Arial, sans-serif"
+                  font-size="17" font-weight="900"
+                  fill="#FFD700" letter-spacing="1">
+                <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+                    My site has moved to priniski.com
+                </textPath>
+            </text>
 
-                <text font-family="'Arial Black', Arial, sans-serif"
-                      font-size="17" font-weight="900"
-                      fill="#FFD700" letter-spacing="1">
-                    <textPath href="#botArc" startOffset="50%" text-anchor="middle">
-                        click anywhere on screen to be directed
-                    </textPath>
-                </text>
-            </g>
+            <text font-family="'Arial Black', Arial, sans-serif"
+                  font-size="17" font-weight="900"
+                  fill="#FFD700" letter-spacing="1">
+                <textPath href="#botArc" startOffset="50%" text-anchor="middle">
+                    click anywhere on screen to be directed
+                </textPath>
+            </text>
         </svg>
     </div>
     <script>
