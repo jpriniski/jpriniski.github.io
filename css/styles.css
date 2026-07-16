@@ -122,7 +122,7 @@ main {
   width: 148px;
   height: 148px;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center 52%;
   display: block;
   margin: 0 auto 20px;
   filter: grayscale(30%) contrast(1.05);
