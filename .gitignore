@@ -1,0 +1,11 @@
+# Local archive and research source materials
+/trash/
+/docs/
+/.style-backups/
+.DS_Store
+
+# Local Vercel project metadata
+/.vercel/
+
+# Generated static publication output
+/site-dist/

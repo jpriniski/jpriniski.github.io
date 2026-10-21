@@ -1,0 +1,30 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.priniski.com"
+        }
+      ],
+      "destination": "https://priniski.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/network-narratives.html",
+      "destination": "/projects/pnas-network-consensus.html",
+      "permanent": true
+    }
+  ],
+  "buildCommand": "node scripts/build.mjs",
+  "outputDirectory": "site-dist"
+}

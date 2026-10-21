@@ -1,0 +1,11 @@
+# Publish website files without local research/archive materials
+/trash/
+/docs/
+/.style-backups/
+.DS_Store
+/.vercel/
+/SITE_AUDIT.md
+/README.md
+
+# Rebuilt from source on Vercel
+/site-dist/

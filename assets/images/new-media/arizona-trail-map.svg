@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 224" shape-rendering="crispEdges" role="img" aria-labelledby="map-title">
+  <title id="map-title">Pixel map of Arizona with a trail from southeast to northwest</title>
+  <rect width="224" height="224" fill="#181814"/>
+  <path d="M52 16H180V192H110V188H96V184H82V180H68V176H54V172H40V168H26V156H34V144H42V132H38V120H46V108H42V100H38V92H32V80H38V72H46V60H52Z" fill="#80502d" transform="translate(4 4)"/>
+  <path d="M52 16H180V192H110V188H96V184H82V180H68V176H54V172H40V168H26V156H34V144H42V132H38V120H46V108H42V100H38V92H32V80H38V72H46V60H52Z" fill="#e4b86c"/>
+  <path d="M112 44H120V36H128V44H136V52H112Z M56 148H64V140H72V148H80V156H56Z" fill="#bd8847"/>
+  <path d="M148 64V84H144V72H140V64H136V76H144V92H148V80H156V68H152V76H148Z M84 124V144H80V132H76V124H72V136H80V152H84V140H92V128H88V136H84Z" fill="#6c7845"/>
+  <path d="M156 172V156H148V140H132V124H120V108H104V92H88V76H72V48H64" fill="none" stroke="#986033" stroke-width="8"/>
+  <path d="M156 172V156H148V140H132V124H120V108H104V92H88V76H72V48H64" fill="none" stroke="#fff1c3" stroke-width="4" stroke-dasharray="4 4"/>
+  <rect x="150" y="166" width="12" height="12" fill="#986033"/>
+  <rect x="154" y="170" width="4" height="4" fill="#fff1c3"/>
+  <path d="M62 50V28H66V50Z" fill="#593e2b"/>
+  <path d="M66 28H86V36H78V40H66Z" fill="#ed4e31"/>
+</svg>

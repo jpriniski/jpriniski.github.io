@@ -1,0 +1,158 @@
+{
+  "baseUrl": "https://priniski.com/",
+  "siteName": "Hunter Priniski",
+  "person": {
+    "name": "Hunter Priniski",
+    "alternateName": "J. Hunter Priniski",
+    "jobTitle": "Postdoctoral Fellow",
+    "description": "Research scientist studying narrative agency, human–AI group alignment, and emerging technologies.",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of California, Los Angeles",
+      "url": "https://www.ucla.edu/"
+    },
+    "sameAs": [
+      "https://scholar.google.com/citations?user=D64qYuwAAAAJ",
+      "https://github.com/jpriniski",
+      "https://substack.com/@newsage"
+    ]
+  },
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Hunter Priniski, PhD | Narrative Agency & Human–AI Research",
+      "description": "Hunter Priniski studies narrative agency, human–AI group alignment, and emerging technologies, applying research through digital tools and new media.",
+      "image": "assets/images/optimized/hunter-priniski-share.jpg",
+      "imageAlt": "Hunter Priniski, PhD: research on narrative agency, human–AI group alignment, and new media."
+    },
+    {
+      "file": "about.html",
+      "title": "About Hunter Priniski | Research Scientist at UCLA",
+      "description": "Meet Hunter Priniski, a UCLA postdoctoral fellow studying narrative agency and human–AI group communication, with work spanning research and new media.",
+      "image": "assets/images/optimized/hunter-priniski-share.jpg",
+      "imageAlt": "Hunter Priniski, PhD, research scientist inspiring human narratives.",
+      "type": "ProfilePage"
+    },
+    {
+      "file": "portfolio.html",
+      "title": "Narrative Agency & Human–AI Research | Hunter Priniski",
+      "description": "Research on narrative agency, human–AI alignment, online networks, and health beliefs, combining group experiments, language analysis, and computational models.",
+      "image": "assets/images/optimized/hunter-priniski-share.jpg",
+      "imageAlt": "Hunter Priniski’s research in narrative agency and human–AI group alignment.",
+      "type": "CollectionPage"
+    },
+    {
+      "file": "new-media.html",
+      "title": "New Media & Community Projects | Hunter Priniski",
+      "description": "Narrative agency in practice through Digital Community Gardens, Vitality AZ, Faithscape and New Sage, and the mediaslop arcade and digests.",
+      "image": "assets/images/digital-community-gardens.png",
+      "imageAlt": "Digital Community Gardens connects personal stories, shared concerns, and local action.",
+      "type": "CollectionPage"
+    },
+    {
+      "file": "teaching.html",
+      "title": "Teaching | Hunter Priniski",
+      "description": "Hunter Priniski’s approach to teaching and mentoring, connecting psychological research, computational methods, and students’ own questions and experiences.",
+      "image": "assets/images/optimized/hunter-priniski-share.jpg",
+      "imageAlt": "Hunter Priniski, PhD, research scientist and educator."
+    },
+    {
+      "file": "consulting.html",
+      "title": "AI & Computational Language Consulting | Hunter Priniski",
+      "description": "Computational language analysis, behavioral research, and AI consulting with Hunter Priniski, including projects with Duke and PublicScholarship.org.",
+      "image": "assets/images/optimized/hunter-priniski-share.jpg",
+      "imageAlt": "Hunter Priniski, PhD: computational language analysis and behavioral research consulting."
+    },
+    {
+      "file": "projects/narrative-agency.html",
+      "title": "AI, Human Narratives & Narrative Agency | Hunter Priniski",
+      "description": "A narrative agency framework explaining how AI affects people’s ability to learn, communicate, and shape narratives, with implications for human–AI alignment.",
+      "image": "assets/images/papers/agency-page-9.png",
+      "imageAlt": "Psychological and communicative processes underlying narrative agency."
+    },
+    {
+      "file": "projects/pnas-network-consensus.html",
+      "title": "Network Structure & Narrative Consensus | Hunter Priniski",
+      "description": "PNAS research showing how network structure and individual decisions shape shared hashtags and the narrative information people carry into their own accounts.",
+      "image": "assets/images/optimized/networks-overview-1600.png",
+      "imageAlt": "Experimental design for studying narrative communication in human networks."
+    },
+    {
+      "file": "projects/human-ai-networks.html",
+      "title": "Human–AI Group Communication & Alignment | Hunter Priniski",
+      "description": "Ongoing experiments on how AI agents in group communication networks influence shared language, understanding of events, and perceptions of others’ beliefs.",
+      "image": "assets/images/papers/hybrid-experiment-design.png",
+      "imageAlt": "AI persona engineering and human–AI network interaction experiment."
+    },
+    {
+      "file": "projects/generative-agents.html",
+      "title": "Generative Agents & Hashtag Coordination | Hunter Priniski",
+      "description": "Benchmarking networked LLM agents against human hashtag coordination, revealing differences in convergence and the causal content of shared narratives.",
+      "image": "https://arxiv.org/html/2510.26832v1/images/Fukushima_Narrative_Alignment.png",
+      "imageAlt": "Hashtags most similar to narrative entities in human and LLM agent groups."
+    },
+    {
+      "file": "projects/belief-modeling.html",
+      "title": "Modeling Human Beliefs from Language | Hunter Priniski",
+      "description": "An AI pipeline maps expressed causal beliefs from language, applied to COVID-19 vaccine tweets and changes in personal narratives after group communication.",
+      "image": "assets/images/Causal-Claims.png",
+      "imageAlt": "Network of expressed causal beliefs extracted from COVID-19 vaccine tweets."
+    },
+    {
+      "file": "projects/crowdsourced-interventions.html",
+      "title": "Interactive Media & Belief Change | Hunter Priniski",
+      "description": "Studies of arguments from Reddit’s Change My View and interactive educational media, testing how crowdsourced explanations shift attitudes on contested issues.",
+      "image": "assets/images/papers/redlining-interactive-map.png",
+      "imageAlt": "Interactive map connecting historical redlining with present-day neighborhood income."
+    },
+    {
+      "file": "projects/social-media-dynamics.html",
+      "title": "Hashtag Activism & Online Narrative Power | Hunter Priniski",
+      "description": "Research on hashtag activism, moral language after George Floyd’s killing, and QAnon networks, connecting collective attention with unequal narrative influence.",
+      "image": "assets/images/thumbs/Hashtags.png",
+      "imageAlt": "Hashtag co-occurrence network from the QAnon knowledge-graph study."
+    },
+    {
+      "file": "projects/covid-beliefs.html",
+      "title": "COVID-19 Skepticism & Distrust | Hunter Priniski",
+      "description": "Preregistered surveys and Bayesian models trace how political distrust, vaccine fears, and other beliefs related to COVID-19 skepticism during the first U.S. wave.",
+      "image": "assets/images/optimized/covid-wave-two-1600.png",
+      "imageAlt": "Survey responses linking COVID-19 skepticism with political, economic, and medical beliefs."
+    },
+    {
+      "file": "projects/digital-community-gardens.html",
+      "title": "Digital Community Gardens | Community-Led AI",
+      "description": "A planned civic platform using public art and community-led AI to connect residents’ stories, shared concerns, and local organizing around technology decisions.",
+      "image": "assets/images/digital-community-gardens.png",
+      "imageAlt": "Digital Community Gardens: discover, explore, share, connect, and act."
+    },
+    {
+      "file": "projects/vitality-az.html",
+      "title": "Vitality AZ | Community Storytelling & Placemaking",
+      "description": "A collaboration among Arizona residents, artists, developers, academics, and city leaders, connecting shared stories through Arizona Trail, public art, and events.",
+      "image": "assets/images/new-media/vitality-az-logo.png",
+      "imageAlt": "Vitality AZ: growing community in the Valley of the Sun."
+    },
+    {
+      "file": "projects/faithscape.html",
+      "title": "Faithscape & New Sage | Hunter Priniski",
+      "description": "Research and public writing on meaning, belonging, religion, and neighborhood design, exploring how to build spirituality and community in secular spaces.",
+      "image": "assets/images/optimized/newsage-share.png",
+      "imageAlt": "New Sage wordmark: building spirituality in secular spaces."
+    },
+    {
+      "file": "projects/mediaslop.html",
+      "title": "mediaslop | Arcade Games & Slop Digests",
+      "description": "Explore eight free mediaslop browser games about attention and online life, and sign up for slop digests with games, writing, and creative experiments.",
+      "image": "assets/images/new-media/mediaslop-arcade-poster.png",
+      "imageAlt": "mediaslop Arcade poster featuring eight browser games."
+    },
+    {
+      "file": "projects/narrative-alignment-notebook.html",
+      "title": "Narrative Alignment Python Notebook | Hunter Priniski",
+      "description": "A Python notebook demonstrating narrative alignment analysis for the Fukushima network experiment, linking hashtag language to events in a shared narrative.",
+      "image": "assets/images/papers/agency-page-14.png",
+      "imageAlt": "Methods for measuring narrative alignment and changes in personal accounts."
+    }
+  ]
+}

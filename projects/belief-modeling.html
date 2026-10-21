@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+  <!-- BEGIN GENERATED SEO -->
+  <title>Modeling Human Beliefs from Language | Hunter Priniski</title>
+  <meta name="description" content="An AI pipeline maps expressed causal beliefs from language, applied to COVID-19 vaccine tweets and changes in personal narratives after group communication."/>
+  <link rel="canonical" href="https://priniski.com/projects/belief-modeling.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Hunter Priniski"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:url" content="https://priniski.com/projects/belief-modeling.html"/>
+  <meta property="og:title" content="Modeling Human Beliefs from Language | Hunter Priniski"/>
+  <meta property="og:description" content="An AI pipeline maps expressed causal beliefs from language, applied to COVID-19 vaccine tweets and changes in personal narratives after group communication."/>
+  <meta property="og:image" content="https://priniski.com/assets/images/Causal-Claims.png"/>
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:alt" content="Network of expressed causal beliefs extracted from COVID-19 vaccine tweets."/>
+  <meta property="og:image:width" content="1502"/>
+  <meta property="og:image:height" content="586"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Modeling Human Beliefs from Language | Hunter Priniski"/>
+  <meta name="twitter:description" content="An AI pipeline maps expressed causal beliefs from language, applied to COVID-19 vaccine tweets and changes in personal narratives after group communication."/>
+  <meta name="twitter:image" content="https://priniski.com/assets/images/Causal-Claims.png"/>
+  <meta name="twitter:image:alt" content="Network of expressed causal beliefs extracted from COVID-19 vaccine tweets."/>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://priniski.com/projects/belief-modeling.html#webpage",
+      "url": "https://priniski.com/projects/belief-modeling.html",
+      "name": "Modeling Human Beliefs from Language | Hunter Priniski",
+      "description": "An AI pipeline maps expressed causal beliefs from language, applied to COVID-19 vaccine tweets and changes in personal narratives after group communication.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://priniski.com/#website"
+      },
+      "author": {
+        "@id": "https://priniski.com/#person"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://priniski.com/assets/images/Causal-Claims.png",
+        "width": 1502,
+        "height": 586
+      }
+    }
+  ]
+}
+  </script>
+  <!-- END GENERATED SEO -->
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../portfolio.html">Research</a></li>
+        <li><a href="../new-media.html">New Media</a></li>
+        <li><a href="../teaching.html">Teaching</a></li>
+        <li><a href="../consulting.html">Consulting</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="project-wrap research-dossier causal-dossier">
+<a class="back-link" href="../portfolio.html">← Back to Research Portfolio</a>
+<div class="dossier-heading">
+  <h1 class="page-title">Modeling Human Beliefs with LLMs</h1>
+  <p class="project-phase">ACL · System Demonstrations · 2023</p>
+  <p class="paper-reference">Priniski, J. H., Verma, I., &amp; Morstatter, F. (2023). <a href="https://doi.org/10.18653/v1/2023.acl-demo.41">Pipeline for modeling causal beliefs from natural language</a>. <cite>Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)</cite>, 436–443.</p>
+</div>
+<div class="dossier-overview">
+    <h2 class="overview-heading">Mapping Human Beliefs from Language</h2>
+
+<p>Causal reasoning is a core cognitive function and is central to how people learn and update their beliefs. We present a causal language analysis pipeline that leverages a large language model to identify causal claims in natural language documents, and aggregates claims across a corpus to produce a causal claim network.</p>
+</div>
+<figure id="causal-network" class="research-figure causal-network-figure">
+<a class="figure-link" href="../assets/images/Causal-Claims.png"><img src="../assets/images/Causal-Claims.png" alt="Causal claim network extracted from COVID-19 vaccine tweets, with keywords describing example causal topics." loading="lazy" width="1502" height="586"/></a>
+<figcaption>A causal claim network built from tweets about the COVID-19 vaccine. Nodes represent causal topics; directed edges represent expressed cause-and-effect relationships. Keywords on the right describe example topic clusters.</figcaption>
+</figure>
+<h3 class="consensus-shared-heading">Aggregating causal claims reveals the interlocking topics in a corpus</h3>
+<div class="consensus-explanations">
+<div class="narrative-method">
+<span class="tag">Causal claim network</span>
+<p>Extracted cause-effect tuples serve as directed edges in the causal claim network, which are strung together throughout the corpus. The edge direction encodes the direction of the causal relation, while edge weights encode the number of instances in which one entity was said to cause another.</p>
+</div>
+<div class="narrative-method">
+<span class="tag">Causal topics</span>
+<p>The clusters included vaccines and their anticipated consequences, spanning topics such as death, side effects, immunity, and antibodies. Clustering simplifies the resulting graph by mapping semantically similar claims to a common node, allowing researchers to examine how these topics are linked across the corpus.</p>
+</div>
+</div>
+
+<section class="research-section" aria-labelledby="causal-pipeline-heading">
+<h2 id="causal-pipeline-heading">From Text to Networks of Causal Beliefs</h2>
+<p>In collaboration with the USC Department of Computer Science, we developed the Causal Claims AI Pipeline by fine-tuning an open-weight transformer model on a dataset of causal claims and extending it to generate interactive networks of people’s belief systems from identified causal relationships.</p>
+<ol class="pipeline-steps">
+<li><strong>Extract causal claims.</strong> A RoBERTa-XL transformer identifies which words belong to cause and effect events in each document.</li>
+<li><strong>Identify causal topics.</strong> Cause-and-effect word spans are clustered by their semantic embeddings, grouping related entities across documents.</li>
+<li><strong>Construct the network.</strong> Extracted cause-effect pairs become directed edges; edge weights encode how often one entity was said to cause another.</li>
+</ol>
+<p>The <a href="https://github.com/ishaanverma/causal-claims-pipeline">open-source pipeline</a> provides the code for extracting causal claims, clustering topics, and building these networks.</p>
+</section>
+<section class="research-section" aria-labelledby="causal-vaccine-heading">
+<h2 id="causal-vaccine-heading">Mapping Causal Beliefs About COVID-19 Vaccines</h2>
+<p>To test this pipeline, we built a causal claim network using a set of 6,000 tweets about the COVID-19 vaccine. The pipeline returned 408 extracted causal claims belonging to nine distinct clusters.</p>
+<p>The clusters covered specific vaccines, including Oxford and Pfizer, alongside the pandemic, coronavirus, death, side effects, immunity, and antibodies. These topics varied in meaning and valence, revealing the breadth of considerations guiding discussion of COVID-19 vaccines. The discussion connected vaccination with both anticipated protection, such as immunity and antibodies, and feared harms, such as side effects and death. For health communication research, these expressed causal beliefs provide a starting point for designing surveys that assess the specific benefits and risks people associate with vaccines.</p>
+<p>To examine how vaccine attitudes fit within broader systems of medical and political distrust, see my separate <a href="covid-beliefs.html">COVID-19 belief study</a>, which tracked how preexisting distrust shaped skepticism before and during the first wave of U.S. cases.</p>
+
+</section>
+<section class="research-section" aria-labelledby="causal-performance-heading">
+<h2 id="causal-performance-heading">Identifying Cause-and-Effect Language</h2>
+<p>We tested two transformer versions of our causal relation identification model, BERT and RoBERTa-XL, against SCITE, the previously reported state-of-the-art model. Our RoBERTa-XL version achieved the highest precision, recall, and F1 scores, establishing state-of-the-art performance on this benchmark at the time of publication.</p>
+<div class="model-table-wrap" role="region" aria-label="Causal relation identification benchmark" tabindex="0">
+<table class="model-comparison">
+<caption>Performance of the prior SCITE model and the two transformer versions we tested (ACL 2023, Table 1).</caption>
+<thead><tr><th scope="col">Model</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th></tr></thead>
+<tbody>
+<tr><th scope="row">SCITE (prior benchmark)</th><td>0.833</td><td>0.858</td><td>0.845</td></tr>
+<tr><th scope="row">BERT (our version)</th><td>0.824</td><td>0.858</td><td>0.841</td></tr>
+<tr><th scope="row">RoBERTa-XL ★ (our version)</th><td>0.883</td><td>0.865</td><td>0.874</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="research-section" aria-labelledby="causal-pnas-heading">
+<h2 id="causal-pnas-heading">Measuring Changes in Personal Narratives After Networked Communication</h2>
+<p>In a separate paper published in PNAS (Priniski et al., 2026), I applied this pipeline to measure how networked communication changed personal narratives. Before and after network interaction, participants wrote tweet-like personal narratives about the Fukushima nuclear disaster. We used the causal language pipeline to identify causal claims in those narratives and cluster their cause-and-effect spans by semantic topic. Comparing the number and content of claims before and after interaction revealed how networked communication shifted participants’ personal narratives.</p><p>Participants in fully connected hashtag-matching networks showed the largest increase in causal language, with most added claims focusing on causes of the disaster.</p>
+<p>See <a href="pnas-network-consensus.html#nlp-heading">how I applied this pipeline in the PNAS network experiment</a> to measure shifts in personal narratives following networked communication, alongside the hashtag alignment method and its behavioral results.</p>
+</section>
+</main>
+<footer>
+  &copy; 2026 Hunter Priniski &nbsp;·&nbsp; priniski@ucla.edu &nbsp;·&nbsp; UCLA Postdoctoral Fellow
+</footer>
+
+<script src="../assets/js/site.js"></script>
+</body>
+</html>
